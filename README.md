@@ -1,10 +1,11 @@
 # The Comeback 💪 Training for two
 
-A 13-week coached program to get you and your wife back in the gym: **lean, strong, and functional.**
+A 13-week coached program to get Ali and Aamna back in the gym: **lean, strong, and functional.**
 Some sessions together, some solo, and all of them progressive and tracked.
 
-**▶ Today:** [Week 1 · Session 1, Together: "We're Back"](sessions/2026-11-06_W1D1_together.md)
-**Now:** Phase 1 (Re-Entry) · Week 1 · Fri 6 Nov 2026
+**▶ Open the app:** [The Comeback](https://claude.ai/artifact/Ba3fQQnaSsQJhDLfW1WFiu): today's session with animated demos, muscle maps, set logging, a rest timer and the relay stopwatch.
+**▶ Session sheet:** [Week 1 · Session 1, Together: "We're Back"](sessions/2026-11-07_W1D1_together.md)
+**Now:** Phase 1 (Re-Entry) · Week 1 · Day 1 is Sat 7 Nov 2026
 
 ---
 
@@ -13,10 +14,10 @@ Some sessions together, some solo, and all of them progressive and tracked.
 ```
 1. Tell the coach   →  "Going together tonight, ~60 min, legs a bit sore"
                        "Going alone tomorrow morning, 45 min"
-2. Coach writes it  →  a session sheet in sessions/ with weights for each of you
+2. Coach writes it  →  a session sheet in sessions/ and an updated app, with weights for each of you
 3. You train        →  note your weights and reps (or just remember roughly)
-4. Report back      →  "Done! Me: goblet 24 kg × 10, 10, 10, easy. Her: 12 kg, felt good.
-                        Relay 9:12. Nothing hurt."
+4. Report back      →  tap "Build my report" in the app, copy, paste into the chat
+                        (or just: "Ali goblet 24 kg × 10s, easy. Aamna 12 kg, felt good. Relay 9:12.")
 5. Coach updates    →  progress log, PRs, streaks, next session gets harder
 ```
 
@@ -39,7 +40,8 @@ Messy reports are fine. A quick voice-to-text is plenty.
 | [`program/exercise-library.md`](program/exercise-library.md) | Cues, plus easier and harder versions of every exercise |
 | [`sessions/`](sessions/) | One sheet per workout, with targets, a log table, and coach notes |
 | [`log/progress.md`](log/progress.md) | Scoreboard, key lifts, benchmarks, milestones 🏅 |
-| [`profiles/`](profiles/) | About each of you: history, goals, injuries, preferences |
+| [`profiles/`](profiles/) | About Ali and Aamna: history, goals, injuries, preferences |
+| [`app/`](app/) | The session app (published as a private claude.ai page). See CLAUDE.md for how it is updated |
 | [`templates/session-template.md`](templates/session-template.md) | The blueprint for new session sheets |
 | [`CLAUDE.md`](CLAUDE.md) | The coach's operating manual, so every new chat picks up exactly where the last one left off |
 

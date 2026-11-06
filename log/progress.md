@@ -4,24 +4,24 @@ _Updated by the coach after every session. Compete with your past self, never wi
 
 ## Scoreboard
 
-| | You | Wife |
+| | Ali | Aamna |
 |---|---|---|
 | Sessions completed | 0 | 0 |
 | …of which together | 0 | 0 |
 | …of which solo | 0 | 0 |
-| Weeks hitting the target (You 3+, Wife 2+) | 0 | 0 |
+| Weeks hitting the target (Ali 3+, Aamna 2+) | 0 | 0 |
 | Current week streak | — | — |
 | PRs this block | 0 | 0 |
 
-**Now:** Phase 1 (Re-Entry) · Week 1 · Kickoff, Fri 6 Nov 2026
+**Now:** Phase 1 (Re-Entry) · Week 1 · Day 1 is Sat 7 Nov 2026 (start moved from Fri 6 Nov before it happened; not a miss)
 
 ---
 
 ## Week by week
 
-| Wk | Dates | Phase | Target (You / Wife) | You | Wife | Together | Notes |
+| Wk | Dates | Phase | Target (Ali / Aamna) | Ali | Aamna | Together | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | 6–15 Nov | Re-Entry | 3–4 / 3 | 0 | 0 | 0 | Kickoff week |
+| 1 | 7–15 Nov | Re-Entry | 3–4 / 3 | 0 | 0 | 0 | Kickoff week |
 | 2 | 16–22 Nov | Re-Entry | 3 / 2–3 | | | | Benchmark baseline |
 | 3 | 23–29 Nov | Re-Entry | 3 / 2–3 | | | | Barbells return |
 | 4 | 30 Nov–6 Dec | Build | 3–4 / 2–3 | | | | |
@@ -39,15 +39,15 @@ _Updated by the coach after every session. Compete with your past self, never wi
 
 ## Session log
 
-| # | Date | Session | Who | Felt (1–10) You / Wife | Highlights | File |
+| # | Date | Session | Who | Felt (1–10) Ali / Aamna | Highlights | File |
 |---|---|---|---|---|---|---|
-| 1 | 2026-11-06 | W1 S1 · T-A "We're Back" | Both | — | _planned_ | [link](../sessions/2026-11-06_W1D1_together.md) |
+| 1 | 2026-11-07 | W1 S1 · T-A "We're Back" | Both | — | _planned_ | [link](../sessions/2026-11-07_W1D1_together.md) |
 
 ---
 
-## Key lifts: You
+## Key lifts: Ali
 
-_Format: kg × reps. "Pre-break" is your old best working weight. Tell the coach if you remember it._
+_Format: kg × reps. "Pre-break" is the old best working weight. Tell the coach if you remember it._
 
 | Lift | Pre-break | Baseline | Latest | Best this block | Change |
 |---|---|---|---|---|---|
@@ -59,7 +59,7 @@ _Format: kg × reps. "Pre-break" is your old best working weight. Tell the coach
 | Pulldown → pull-ups | ? | | | | |
 | Farmer carry (kg/hand) | ? | | | | |
 
-## Key lifts: Wife
+## Key lifts: Aamna
 
 | Lift | Pre-break | Baseline | Latest | Best this block | Change |
 |---|---|---|---|---|---|
@@ -83,7 +83,7 @@ _Format: kg × reps. "Pre-break" is your old best working weight. Tell the coach
 
 Done fresh at the start of a session, after the warm-up.
 
-| Test | You W2 | You W7 | You W13 | Wife W2 | Wife W7 | Wife W13 |
+| Test | Ali W2 | Ali W7 | Ali W13 | Aamna W2 | Aamna W7 | Aamna W13 |
 |---|---|---|---|---|---|---|
 | Push-ups, max strict (note the variant) | | | | | | |
 | Dead hang (s) | | | | | | |
@@ -95,7 +95,7 @@ Done fresh at the start of a session, after the warm-up.
 
 Every 2 weeks. Weight = weekly average, not a single weigh-in.
 
-| Date | You: weight | You: waist | Wife: weight | Wife: waist | Photos? |
+| Date | Ali: weight | Ali: waist | Aamna: weight | Aamna: waist | Photos? |
 |---|---|---|---|---|---|
 | | | | | | |
 
@@ -103,7 +103,7 @@ Every 2 weeks. Weight = weekly average, not a single weigh-in.
 
 ## Milestones 🏅
 
-| Milestone | You | Wife |
+| Milestone | Ali | Aamna |
 |---|---|---|
 | First session back | | |
 | First full week on target | | |

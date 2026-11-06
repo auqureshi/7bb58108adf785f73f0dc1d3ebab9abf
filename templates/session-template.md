@@ -1,6 +1,6 @@
-# Week X · Session N: <Together | Solo (You) | Solo (Wife)> · "<Session name>"
+# Week X · Session N: <Together | Solo (Ali) | Solo (Aamna)> · "<Session name>"
 
-**<Day DD Mon YYYY>** · Template **<T-A | T-B | T-C | S-U | S-L>** · Phase <n>: <name> · ~<60> min · **Effort: RPE <x>**
+**<Day DD Mon YYYY>** · App: https://claude.ai/artifact/Ba3fQQnaSsQJhDLfW1WFiu · Template **<T-A | T-B | T-C | S-U | S-L>** · Phase <n>: <name> · ~<60> min · **Effort: RPE <x>**
 
 ---
 
@@ -11,19 +11,19 @@
 <Standard warm-up, plus ramp sets for the first lift.>
 
 ## Block A: <format> · <rounds>
-| | Exercise | Sets × reps | You: target | Wife: target | Cues |
+| | Exercise | Sets × reps | Ali: target | Aamna: target | Cues |
 |---|---|---|---|---|---|
 | A1 | | | | | |
 | A2 | | | | | |
 
 ## Block B: <format> · <rounds>
-| | Exercise | Sets × reps | You: target | Wife: target | Cues |
+| | Exercise | Sets × reps | Ali: target | Aamna: target | Cues |
 |---|---|---|---|---|---|
 | B1 | | | | | |
 | B2 | | | | | |
 
 ## Block C: <format>
-| | Exercise | Sets × reps | You: target | Wife: target | Cues |
+| | Exercise | Sets × reps | Ali: target | Aamna: target | Cues |
 |---|---|---|---|---|---|
 | C1 | | | | | |
 
@@ -36,11 +36,11 @@
 ## Equipment swaps
 
 ## Log
-| Exercise | You: kg × reps (RPE) | Wife: kg × reps (RPE) |
+| Exercise | Ali: kg × reps (RPE) | Aamna: kg × reps (RPE) |
 |---|---|---|
 | | | |
 
-| | You | Wife |
+| | Ali | Aamna |
 |---|---|---|
 | Energy before (1–10) | | |
 | How hard overall (1–10) | | |
@@ -51,4 +51,4 @@
 ## Coach notes (after the session)
 - **Wins:**
 - **Fix:**
-- **Next targets:** You · Wife
+- **Next targets:** Ali · Aamna

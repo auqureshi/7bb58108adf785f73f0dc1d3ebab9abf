@@ -1,4 +1,4 @@
-# The Comeback Program: a 13-week block for two
+# The Comeback Program: a 13-week block for Ali and Aamna
 
 **Goal:** lean, strong, and functional for both of you.
 **Structure:** 3 phases, plus a deload and a test week. Together sessions are built around partner formats. Solo sessions fill the gaps.
@@ -21,7 +21,7 @@
 
 | Week | Dates | Phase | Focus |
 |---|---|---|---|
-| 1 | Fri 6 Nov – Sun 15 Nov | **1 · Re-Entry** | Kickoff week (10 days). Groove technique, find baselines. RPE 6 |
+| 1 | Sat 7 Nov – Sun 15 Nov | **1 · Re-Entry** | Kickoff week (9 days). Groove technique, find baselines. RPE 6 |
 | 2 | 16 – 22 Nov | 1 · Re-Entry | RPE 7 · **Benchmark baseline tests** |
 | 3 | 23 – 29 Nov | 1 · Re-Entry | RPE 7–8 · barbell lifts return |
 | 4 | 30 Nov – 6 Dec | **2 · Build** | 4 × 6–8 main lifts, add load |
@@ -41,7 +41,7 @@ Holidays or travel? Follow the **missed-time rules** below. Losing a week is fin
 
 ## Weekly structure
 
-**Targets:** Wife: 2–3 sessions/week. You: 3–4 sessions/week. **Minimum effective dose: 2 per week each.**
+**Targets:** Aamna: 2–3 sessions/week. Ali: 3–4 sessions/week. **Minimum effective dose: 2 per week each.**
 On non-gym days, walk. Aim for 8–10k steps; an evening walk together counts.
 
 | Code | Session | Who | Focus |
@@ -49,8 +49,8 @@ On non-gym days, walk. Aim for 8–10k steps; an evening walk together counts.
 | **T-A** | Together A: Squat & Push | Both | Squat, horizontal push/pull, single leg, core |
 | **T-B** | Together B: Hinge & Pull | Both | Hinge, vertical push/pull, glutes, loaded carries |
 | **T-C** | Together C: Athletic & Engine | Both | Power, single leg, push-ups, partner conditioning (the "lean" day) |
-| **S-U** | Solo Upper: Strength & Arms | You (or wife) | Heavier pressing and pulling, shoulders, arms |
-| **S-L** | Solo Lower: Athletic Legs & Engine | You (or wife) | Posterior chain, single leg, longer conditioning |
+| **S-U** | Solo Upper: Strength & Arms | Ali (or Aamna) | Heavier pressing and pulling, shoulders, arms |
+| **S-L** | Solo Lower: Athletic Legs & Engine | Ali (or Aamna) | Posterior chain, single leg, longer conditioning |
 
 - **Together days** rotate **A → B → C → A …**
 - **Solo days:** the coach picks S-U or S-L based on what you've done in the last 48 hours.

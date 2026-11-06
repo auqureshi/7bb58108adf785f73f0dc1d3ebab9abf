@@ -1,9 +1,9 @@
-# Profile: You
+# Profile: Ali
 
 _Fill this in, or just tell the coach and it gets updated for you. Blanks are fine. The coach works with what's known._
 
 ## Basics
-- **Name:**
+- **Name:** Ali
 - **Age:**
 - **Height:**
 - **Bodyweight:**
@@ -12,7 +12,7 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 ## Training history
 - Trained consistently **2–3×/week for several years**.
 - **Last few months:** inconsistent.
-- **Comeback Day 1:** Fri 6 Nov 2026, with your wife.
+- **Comeback Day 1:** Sat 7 Nov 2026, together with Aamna.
 - **Old best working weights** (rough is fine):
   - Squat:
   - Bench:

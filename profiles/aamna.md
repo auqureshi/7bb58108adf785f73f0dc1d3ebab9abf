@@ -1,9 +1,9 @@
-# Profile: Wife
+# Profile: Aamna
 
 _Fill this in, or just tell the coach and it gets updated for you. Blanks are fine. The coach works with what's known._
 
 ## Basics
-- **Name:**
+- **Name:** Aamna
 - **Age:**
 - **Height:**
 - **Bodyweight:** (optional)
@@ -12,7 +12,7 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 ## Training history
 - Has trained before and is **returning**.
 - **How long and how often before?**
-- **Comeback Day 1:** Fri 6 Nov 2026, together.
+- **Comeback Day 1:** Sat 7 Nov 2026, together with Ali.
 - **Old best working weights** (rough is fine):
   - Squat:
   - Bench / push-ups:
