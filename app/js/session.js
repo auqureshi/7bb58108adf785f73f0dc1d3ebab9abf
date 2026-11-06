@@ -12,7 +12,7 @@ window.SESSION = {
   title: 'We’re Back',
   type: 'Together', template: 'T-A · Squat & Push', phase: 'Phase 1 · Re-Entry',
   minutes: 60, rpe: '6',
-  brief: 'Today’s win is walking out feeling like you could do it all again tomorrow. Your strength is still in there and it comes back fast. Your tendons need 2–3 weeks to catch up, so we give them that time. Ali: your starting weights come from your Predrag notes. Aamna: find yours with the calibration rule below.',
+  brief: 'Today’s win is walking out feeling like you could do it all again tomorrow. Your strength is still in there and it comes back fast. Your tendons need 2–3 weeks to catch up, so we give them that time. Ali: your starting weights come from your Predrag notes. Aamna: today you set your baselines with the calibration rule below.',
   jobs: ['Show up', 'Move well', 'Find your starting weights', 'Log them'],
   warmup: {
     minutes: 10,
@@ -34,7 +34,7 @@ window.SESSION = {
       note: 'Before your first squat set, do one light feeler set of 8.',
       items: [
         { code: 'A1', ex: 'goblet-squat', sets: 3, reps: '10', rpe: '6', unit: 'kg', start: { ali: '16' }, past: { ali: '20 kg × 10 × 3' } },
-        { code: 'A2', ex: 'db-row', sets: 3, reps: '10 / side', rpe: '6', unit: 'kg', start: { ali: '20' }, past: { ali: '40 kg DB row · 45 kg seated row' } }
+        { code: 'A2', ex: 'db-row', sets: 3, reps: '10 / side', rpe: '6', unit: 'kg', start: { ali: '20' }, past: { ali: '25–30 kg DB row · 45 kg seated row' } }
       ]
     },
     {
@@ -42,7 +42,7 @@ window.SESSION = {
       how: 'Same flow: one on B1, one on B2, then swap. Rest about 60 s after each round.',
       items: [
         { code: 'B1', ex: 'db-rdl', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', start: { ali: '14–16' }, past: { ali: '16 kg floor hinge · trap bar 20 kg' } },
-        { code: 'B2', ex: 'db-bench', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', variants: ['DB bench', 'Incline push-up', 'Push-up'], start: { ali: '14' }, past: { ali: 'bench ~40 kg (10 kg plates)' } }
+        { code: 'B2', ex: 'db-bench', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', variants: ['DB bench', 'Incline push-up', 'Push-up'], start: { ali: '14' }, past: { ali: 'bench 40 kg (10 kg per side)' } }
       ]
     },
     {

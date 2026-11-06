@@ -554,7 +554,7 @@ Object.assign(window.EXERCISES, {
     'hammer-curl': 'Superset with curls: 8 kg × 15 last time.',
     'landmine-rotation': 'Your favourite, "bar left right". Last logged: one drop set at 30, 20 and 10 kg (Dec 2022).',
     'shadow-boxing': 'Predrag’s rounds: 20 s jabs, 20 s uppercuts, 20 s hooks, then 10 s rest. 3 rounds make a set. Do 3 sets.',
-    'db-row': 'Your notes say 40 kg on the single-arm row. Start lighter in Week 1 and earn it back.',
+    'db-row': 'You rowed about 25–30 kg with Predrag. Start around 20 kg in Week 1 and earn it back.',
     'pull-up': '5 strict reps × 4 sets in March 2022. That’s the first target to beat.',
     'overhead-press': 'Bar plus 5 kg per side × 4 sets in March 2022.',
     'back-extension': '12 × 3 to finish back day.'

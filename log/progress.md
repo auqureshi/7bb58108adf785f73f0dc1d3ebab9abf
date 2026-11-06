@@ -47,15 +47,15 @@ _Updated by the coach after every session. Compete with your past self, never wi
 
 ## Key lifts: Ali
 
-_Format: kg × reps. "Pre-break" comes from Ali's Predrag notes, 2021–22 ([history](../history/summary.md)). It is a floor: update it if Ali remembers more recent numbers._
+_Format: kg × reps. "Pre-break" comes from Ali's Predrag notes, 2021–22 ([history](../history/summary.md)). Ali confirmed this is about where things stood before the break, maybe a bit higher._
 
 | Lift | Pre-break | Baseline | Latest | Best this block | Change |
 |---|---|---|---|---|---|
 | Squat (goblet → back squat) | Goblet 20 × 10 · Smith 15 kg/side | | | | |
-| Bench (DB → barbell) | ~40 kg barbell (to confirm) | | | | |
+| Bench (DB → barbell) | 40 kg barbell (10 kg/side) | | | | |
 | Hinge (DB RDL → deadlift) | 16 kg floor hinge · trap bar 20 kg | | | | |
 | Overhead press | ~30 kg × 4 sets | | | | |
-| Row | Seated row 45 × 12 · DB row 40 kg (to confirm) | | | | |
+| Row | Seated row 45 × 12 · DB row 25–30 kg | | | | |
 | Pulldown → pull-ups | Pulldown 45 × 12 · **5 pull-ups** | | | | |
 | Farmer carry (kg/hand) | — | | | | |
 | Landmine rotation ("bar left right") | 30 → 20 → 10 kg drop set | | | | |

@@ -12,6 +12,7 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 ## Training history
 - Has trained before and is **returning**.
 - **How long and how often before?**
+- **No old notes or numbers** (confirmed 2026-11-06). Her baselines come from Week 1 calibration.
 - **Comeback Day 1:** Sat 7 Nov 2026, together with Ali.
 - **Old best working weights** (rough is fine):
   - Squat:

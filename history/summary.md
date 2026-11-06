@@ -3,8 +3,9 @@
 Source: [`predrag-notes-raw.md`](predrag-notes-raw.md), Ali's own notes from sessions with trainer Predrag, Dec 2021 to Dec 2022.
 They are kept here so every future plan builds on what Ali has already done.
 
-> **Before you rely on these numbers:** they are 4–5 years old. Ali kept training regularly after them, so Ali's strength just before the break
-> was probably higher. Treat them as a **floor**, not a target, and ask Ali for anything more recent.
+> **Confirmed by Ali (2026-11-06):** all of these notes are Ali's. Ali's level just before the break was about the same as these numbers,
+> maybe a little higher, so treat them as the **pre-break baseline**. Bench "10 kg" means 10 kg plates per side (40 kg total).
+> The 1-arm DB row was really **25–30 kg**; the "40 kg" in the notes is a slip.
 
 ## Timeline
 
@@ -39,14 +40,14 @@ They are kept here so every future plan builds on what Ali has already done.
 | Machine rear-delt fly | 40 kg × 12 × 4 | Dec 2022 | |
 | Landmine rotation ("bar left right") | 30 → 20 → 10 kg drop set | Dec 2022 | Favourite |
 | Pull-ups | 5 reps × 4 sets | Mar 2022 | |
-| 1-arm DB row | 40 kg | Jan 2022 | Check: heavy next to the other loads of that time |
+| 1-arm DB row | 25–30 kg (notes say 40 kg; Ali corrected it) | 2022 | |
 | Goblet squat | 20 kg × 10 × 3 | 2022 | |
 | Smith squat | 15 kg per side × 3 sets | Dec 2021 | |
 | Leg press | 55 kg × 10 → 45 kg × 15 drop set | 2022 | |
 | Leg extension | 32 kg × 15 × 3 | Dec 2021 | |
 | Trap bar deadlift | 20 kg | Dec 2021 | Plates or total unclear |
 | KB / DB deadlift to floor | 16 kg | Dec 2021 | |
-| Bench press | "10 kg" | Dec 2021 | Probably 10 kg plates per side, about 40 kg total. Confirm |
+| Bench press | 40 kg (10 kg plates per side) | Dec 2021 | Confirmed by Ali |
 | Incline bench | 20 kg bar + 5 kg plates (~30 kg) | Jan 2022 | |
 | Overhead press | Bar + 5 kg per side (~30 kg) × 4 sets | Mar 2022 | 20 kg bar × 12 in Dec 2021 |
 | Clean & press | 20 kg × 3 | Jan 2022 | |
@@ -91,9 +92,9 @@ These are **starting guesses** for the first set, about 65–80% of the old numb
 | Today's exercise | Start at | Based on |
 |---|---|---|
 | Goblet squat | 16 kg | 20 kg × 10 |
-| 1-arm DB row | 20 kg | 40 kg DB row, 45 kg seated row |
+| 1-arm DB row | 20 kg | 25–30 kg DB row, 45 kg seated row |
 | DB Romanian deadlift | 2 × 14–16 kg | 16 kg floor hinge, trap bar 20 kg |
-| DB bench press | 14 kg each | ~40 kg barbell bench |
+| DB bench press | 14 kg each | 40 kg barbell bench |
 | Lat pulldown | 35 kg | 45 kg × 12 |
 | Reverse lunge | Bodyweight | Lunges with 8–10 kg |
-| Farmer carry | 20 kg per hand | No data. Grip was strong (40 kg row) |
+| Farmer carry | 20 kg per hand | No data. Grip held 25–30 kg on rows |

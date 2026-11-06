@@ -17,12 +17,12 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
   The coach's reading is in [`history/summary.md`](../history/summary.md).
 - **Style Ali knows:** body-part split, arm pump supersets, cross-functional circuits, **boxing finishers**, 400 m runs at 12–13 km/h.
 - **Favourite exercise:** "bar left right", the landmine rotation (30 → 20 → 10 kg drop set, Dec 2022).
-- **Last-known numbers from those notes** (2021–22, treat as a floor; probably higher just before the break):
+- **Last-known numbers from those notes** (2021–22). Ali says the level just before the break was about the same, maybe a bit higher:
   - Lat pulldown 45 kg × 12 × 4 · seated row 45 kg × 12 × 3 · pull-ups 5 × 4 sets
   - Goblet squat 20 kg × 10 × 3 · Smith squat 15 kg per side · leg press 55 kg × 10
-  - Bench ~40 kg (10 kg plates, to confirm) · overhead press ~30 kg · clean & press 20 kg × 3
-  - 1-arm DB row 40 kg (to confirm)
-- **Still to ask:** what Ali was lifting just before the break.
+  - Bench 40 kg (10 kg plates per side) · overhead press ~30 kg · clean & press 20 kg × 3
+  - 1-arm DB row 25–30 kg
+- **Confirmed 2026-11-06:** all the Predrag notes are Ali's. No more recent numbers, so these are the pre-break baseline.
 
 ## Goals
 - Lean, strong, functional.
