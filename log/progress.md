@@ -1,0 +1,119 @@
+# Progress tracker 📈
+
+_Updated by the coach after every session. Compete with your past self, never with each other._
+
+## Scoreboard
+
+| | You | Wife |
+|---|---|---|
+| Sessions completed | 0 | 0 |
+| …of which together | 0 | 0 |
+| …of which solo | 0 | 0 |
+| Weeks hitting the target (You 3+, Wife 2+) | 0 | 0 |
+| Current week streak | — | — |
+| PRs this block | 0 | 0 |
+
+**Now:** Phase 1 (Re-Entry) · Week 1 · Kickoff, Fri 6 Nov 2026
+
+---
+
+## Week by week
+
+| Wk | Dates | Phase | Target (You / Wife) | You | Wife | Together | Notes |
+|---|---|---|---|---|---|---|---|
+| 1 | 6–15 Nov | Re-Entry | 3–4 / 3 | 0 | 0 | 0 | Kickoff week |
+| 2 | 16–22 Nov | Re-Entry | 3 / 2–3 | | | | Benchmark baseline |
+| 3 | 23–29 Nov | Re-Entry | 3 / 2–3 | | | | Barbells return |
+| 4 | 30 Nov–6 Dec | Build | 3–4 / 2–3 | | | | |
+| 5 | 7–13 Dec | Build | 3–4 / 2–3 | | | | |
+| 6 | 14–20 Dec | Build | 3–4 / 2–3 | | | | |
+| 7 | 21–27 Dec | Build | 3–4 / 2–3 | | | | Benchmark re-test |
+| 8 | 28 Dec–3 Jan | Deload | 2–3 / 2 | | | | |
+| 9 | 4–10 Jan | Strength & Power | 3–4 / 2–3 | | | | |
+| 10 | 11–17 Jan | Strength & Power | 3–4 / 2–3 | | | | |
+| 11 | 18–24 Jan | Strength & Power | 3–4 / 2–3 | | | | |
+| 12 | 25–31 Jan | Strength & Power | 3–4 / 2–3 | | | | |
+| 13 | 1–7 Feb | Test | 3 / 3 | | | | Final benchmarks 🏁 |
+
+---
+
+## Session log
+
+| # | Date | Session | Who | Felt (1–10) You / Wife | Highlights | File |
+|---|---|---|---|---|---|---|
+| 1 | 2026-11-06 | W1 S1 · T-A "We're Back" | Both | — | _planned_ | [link](../sessions/2026-11-06_W1D1_together.md) |
+
+---
+
+## Key lifts: You
+
+_Format: kg × reps. "Pre-break" is your old best working weight. Tell the coach if you remember it._
+
+| Lift | Pre-break | Baseline | Latest | Best this block | Change |
+|---|---|---|---|---|---|
+| Squat (goblet → back squat) | ? | | | | |
+| Bench (DB → barbell) | ? | | | | |
+| Hinge (DB RDL → deadlift) | ? | | | | |
+| Overhead press | ? | | | | |
+| Row | ? | | | | |
+| Pulldown → pull-ups | ? | | | | |
+| Farmer carry (kg/hand) | ? | | | | |
+
+## Key lifts: Wife
+
+| Lift | Pre-break | Baseline | Latest | Best this block | Change |
+|---|---|---|---|---|---|
+| Squat (goblet → back squat) | ? | | | | |
+| Bench (DB → barbell) / push-up | ? | | | | |
+| Hinge (DB RDL → deadlift) | ? | | | | |
+| Overhead press | ? | | | | |
+| Row | ? | | | | |
+| Pulldown → assisted → pull-up | ? | | | | |
+| Farmer carry (kg/hand) | ? | | | | |
+
+## Conditioning scores
+
+| Test | Date | Result | Notes |
+|---|---|---|---|
+| Comeback Relay (4 × 250 m each, total) | | | |
+
+---
+
+## Benchmarks (Week 2 → Week 7 → Week 13)
+
+Done fresh at the start of a session, after the warm-up.
+
+| Test | You W2 | You W7 | You W13 | Wife W2 | Wife W7 | Wife W13 |
+|---|---|---|---|---|---|---|
+| Push-ups, max strict (note the variant) | | | | | | |
+| Dead hang (s) | | | | | | |
+| Plank (s, capped at 2:00) | | | | | | |
+| 500 m row (time) | | | | | | |
+| Broad jump (cm) | | | | | | |
+
+## Body (optional, only if you both want this tracked)
+
+Every 2 weeks. Weight = weekly average, not a single weigh-in.
+
+| Date | You: weight | You: waist | Wife: weight | Wife: waist | Photos? |
+|---|---|---|---|---|---|
+| | | | | | |
+
+---
+
+## Milestones 🏅
+
+| Milestone | You | Wife |
+|---|---|---|
+| First session back | | |
+| First full week on target | | |
+| 10 sessions | | |
+| First PR (a lift ≥10% above baseline) | | |
+| Phase 1 complete | | |
+| First barbell session back | | |
+| Back to pre-break numbers on a main lift | | |
+| Perfect month (no week under target) | | |
+| 25 sessions | | |
+| Pull-up goal hit (set after Week 2 benchmarks) | | |
+| Every benchmark improved at Week 13 | | |
+| 50 sessions | | |
