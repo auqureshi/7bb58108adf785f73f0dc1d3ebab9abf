@@ -12,7 +12,7 @@ window.SESSION = {
   title: 'We’re Back',
   type: 'Together', template: 'T-A · Squat & Push', phase: 'Phase 1 · Re-Entry',
   minutes: 60, rpe: '6',
-  brief: 'Today’s win is walking out feeling like you could do it all again tomorrow. Your strength is still in there and it comes back fast. Your tendons need 2–3 weeks to catch up, so we give them that time. Patience now means PRs in January.',
+  brief: 'Today’s win is walking out feeling like you could do it all again tomorrow. Your strength is still in there and it comes back fast. Your tendons need 2–3 weeks to catch up, so we give them that time. Ali: your starting weights come from your Predrag notes. Aamna: find yours with the calibration rule below.',
   jobs: ['Show up', 'Move well', 'Find your starting weights', 'Log them'],
   warmup: {
     minutes: 10,
@@ -33,25 +33,25 @@ window.SESSION = {
       how: 'One of you does A1 while the other does A2, then swap. Once you’ve both done both, that’s 1 round. Rest about 60 s.',
       note: 'Before your first squat set, do one light feeler set of 8.',
       items: [
-        { code: 'A1', ex: 'goblet-squat', sets: 3, reps: '10', rpe: '6', unit: 'kg' },
-        { code: 'A2', ex: 'db-row', sets: 3, reps: '10 / side', rpe: '6', unit: 'kg' }
+        { code: 'A1', ex: 'goblet-squat', sets: 3, reps: '10', rpe: '6', unit: 'kg', start: { ali: '16' }, past: { ali: '20 kg × 10 × 3' } },
+        { code: 'A2', ex: 'db-row', sets: 3, reps: '10 / side', rpe: '6', unit: 'kg', start: { ali: '20' }, past: { ali: '40 kg DB row · 45 kg seated row' } }
       ]
     },
     {
       id: 'B', format: 'Swap Stations', rounds: 3, minutes: 12, rest: 60,
       how: 'Same flow: one on B1, one on B2, then swap. Rest about 60 s after each round.',
       items: [
-        { code: 'B1', ex: 'db-rdl', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)' },
-        { code: 'B2', ex: 'db-bench', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', variants: ['DB bench', 'Incline push-up', 'Push-up'] }
+        { code: 'B1', ex: 'db-rdl', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', start: { ali: '14–16' }, past: { ali: '16 kg floor hinge · trap bar 20 kg' } },
+        { code: 'B2', ex: 'db-bench', sets: 3, reps: '10', rpe: '6', unit: 'kg (each DB)', variants: ['DB bench', 'Incline push-up', 'Push-up'], start: { ali: '14' }, past: { ali: 'bench ~40 kg (10 kg plates)' } }
       ]
     },
     {
       id: 'C', format: 'Functional trio', rounds: 2, minutes: 10, rest: 45,
       how: 'Take turns on the pulldown. Do the lunges and carries side by side.',
       items: [
-        { code: 'C1', ex: 'lat-pulldown', sets: 2, reps: '12', rpe: '6–7', unit: 'kg' },
-        { code: 'C2', ex: 'reverse-lunge', sets: 2, reps: '6 / side', rpe: 'easy', unit: 'kg (blank = bodyweight)' },
-        { code: 'C3', ex: 'farmer-carry', sets: 2, reps: '30–40 m', rpe: 'moderate', unit: 'kg per hand' }
+        { code: 'C1', ex: 'lat-pulldown', sets: 2, reps: '12', rpe: '6–7', unit: 'kg', start: { ali: '35' }, past: { ali: '45 kg × 12 × 4 (Dec 2022)' } },
+        { code: 'C2', ex: 'reverse-lunge', sets: 2, reps: '6 / side', rpe: 'easy', unit: 'kg (blank = bodyweight)', past: { ali: 'lunges with 8–10 kg' } },
+        { code: 'C3', ex: 'farmer-carry', sets: 2, reps: '30–40 m', rpe: 'moderate', unit: 'kg per hand', start: { ali: '20' } }
       ]
     }
   ],
@@ -120,5 +120,6 @@ window.PROGRESS = {
   sessions: { ali: 0, aamna: 0, together: 0 },
   streakWeeks: { ali: 0, aamna: 0 },
   prs: { ali: 0, aamna: 0 },
+  history: 'Ali’s Predrag notes (Dec 2021 to Dec 2022) are saved. Marks to beat: 5 strict pull-ups, lat pulldown 45 kg × 12.',
   nextMilestone: 'First session back: tomorrow, Sat 7 Nov'
 };

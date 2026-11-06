@@ -477,3 +477,87 @@ window.EXERCISES = {
     life: 'Core stability for everything.'
   }
 };
+
+/* ---------- Added from Ali's Predrag history (history/summary.md) ---------- */
+Object.assign(window.EXERCISES, {
+  'landmine-rotation': {
+    name: 'Landmine Rotation ("Bar left right")', pattern: 'Rotation core', equipment: 'Barbell in a landmine or a corner', kind: 'core',
+    primary: ['obliques', 'abs'], secondary: ['front-deltoids', 'gluteal', 'upper-back'],
+    goals: ['functional', 'strong'],
+    what: 'Holding the free end of a barbell anchored in a corner, you swing it in an arc from one hip to the other, turning through your hips and feet.',
+    why: 'It trains your core to create and control rotation, which is what you use to throw, punch, swing and turn. It is also your favourite, and that counts: exercises you enjoy get done.',
+    cues: ['Arms long, end of the bar at chest height', 'Pivot your back foot as you rotate, like throwing a punch', 'Turn from your hips, not your lower back', 'Control the bar across. Don’t let it pull you'],
+    mistakes: ['Bending your arms and turning it into a press', 'Twisting only through your lower back', 'Going so heavy that the bar throws you around'],
+    easier: 'Bar only, with a smaller arc.',
+    harder: 'Add plates, or add a press at the end of each arc.',
+    life: 'Turning, throwing and swinging with power and a safe back.'
+  },
+  'shadow-boxing': {
+    name: 'Boxing Rounds', pattern: 'Engine', equipment: 'None (a bag or pads if your gym has them)', kind: 'engine', img: false,
+    primary: ['front-deltoids', 'obliques', 'triceps'], secondary: ['abs', 'chest', 'back-deltoids', 'calves', 'upper-back'],
+    goals: ['lean', 'functional'],
+    what: 'Fast punching rounds: jabs, crosses, hooks and uppercuts in short bursts with brief rests.',
+    why: 'It is serious cardio that doesn’t feel like cardio, and it trains rotation, coordination and shoulder endurance. You already know it from Predrag, so it makes an easy finisher to do together.',
+    cues: ['Stay light on the balls of your feet, guard up', 'Turn your back foot and hip into every cross and hook', 'Snap each punch out and back. Don’t lock your elbow', 'Breathe out sharply on every punch'],
+    mistakes: ['Punching with only your arms', 'Dropping your guard when you get tired', 'Locking your elbows'],
+    easier: 'A slower pace and longer rests.',
+    harder: 'Longer rounds, a heavy bag, or 1–2 kg dumbbells on straight punches only.',
+    life: 'Fitness that is fun, and stress relief.'
+  },
+  'hammer-curl': {
+    name: 'Hammer Curl', pattern: 'Arms', equipment: 'Dumbbells', kind: 'strength',
+    primary: ['biceps', 'forearm'], secondary: [],
+    goals: ['strong'],
+    what: 'A curl with your palms facing each other, as if you were holding a hammer.',
+    why: 'It builds the muscle under your biceps and your forearms, which makes your arms look thicker and your grip stronger.',
+    cues: ['Palms facing each other', 'Elbows pinned to your sides', 'Curl up to your shoulder and squeeze', 'Lower slowly'],
+    mistakes: ['Swinging the weights', 'Elbows drifting forward'],
+    easier: 'Lighter dumbbells.', harder: 'Superset it with regular curls, as you did with Predrag.',
+    life: 'Grip and carrying strength.'
+  },
+  'face-pull': {
+    name: 'Face Pull', pattern: 'Rear shoulders', equipment: 'Cable + rope', kind: 'strength',
+    primary: ['back-deltoids'], secondary: ['trapezius', 'upper-back'],
+    goals: ['functional'],
+    what: 'You pull a rope attachment toward your face, splitting the rope so your hands finish beside your ears.',
+    why: 'It strengthens the back of your shoulders and your upper back. That keeps your shoulders healthy alongside all the pressing, and helps your posture.',
+    cues: ['Cable at face height, rope attachment', 'Pull toward your forehead with your elbows high', 'Split the rope and pull your hands past your ears', 'Pause, then return slowly'],
+    mistakes: ['Leaning back to move a heavy weight', 'Letting your elbows drop'],
+    easier: 'Lighter weight.', harder: 'Pause for 2 seconds at the end of each rep.',
+    life: 'Healthy shoulders and better posture.'
+  },
+  'back-extension': {
+    name: 'Back Extension', pattern: 'Hinge', equipment: '45° back-extension bench', kind: 'strength',
+    primary: ['lower-back', 'gluteal'], secondary: ['hamstring'],
+    goals: ['functional', 'strong'],
+    what: 'On a 45° bench with your hips on the pad, you lower your torso toward the floor and raise it back to a straight line.',
+    why: 'It builds endurance in your lower back and glutes, which protects your back in deadlifts and in daily life.',
+    cues: ['Pad just below your hip bones', 'Hinge down with a flat back', 'Squeeze your glutes to come up', 'Stop when your body is in a straight line. Don’t over-arch'],
+    mistakes: ['Over-arching at the top', 'Jerking up'],
+    easier: 'A smaller range.', harder: 'Hold a plate at your chest.',
+    life: 'A resilient lower back.'
+  }
+});
+
+/* Cues from Ali's sessions with trainer Predrag, shown in the app as "From your sessions with Predrag". */
+(function (E) {
+  var C = {
+    'goblet-squat': 'Go to 90°, pause a second at the bottom, and don’t lock your legs when you stand. Last time with Predrag: 20 kg × 10 × 3.',
+    'back-squat': 'Knees out. Smith squat with 15 kg per side was your last logged set.',
+    'trap-bar-deadlift': 'Arms long, shoulders back, then lift.',
+    'lat-pulldown': 'Thumbs-outside grip, and hold it down for a second. Last logged: 45 kg × 12 × 4 (Dec 2022).',
+    'cable-row': 'Don’t rock forward and back. Stay straight, leaning slightly back. Last logged: 45 kg × 12 × 3 (Dec 2022).',
+    'lateral-raise': 'Elbows up. Last logged: 4 kg × 15.',
+    'db-rdl': 'Predrag’s version: feet close, back straight, push your hips back first, then bend your knees to reach the floor. Today, stop at mid-shin where your hamstrings are tight.',
+    'split-squat': 'Back foot on the bench, and the back knee comes down to touch the floor softly.',
+    'db-curl': 'Twist as much as you can. You supersetted these with hammer curls.',
+    'hammer-curl': 'Superset with curls: 8 kg × 15 last time.',
+    'landmine-rotation': 'Your favourite, "bar left right". Last logged: one drop set at 30, 20 and 10 kg (Dec 2022).',
+    'shadow-boxing': 'Predrag’s rounds: 20 s jabs, 20 s uppercuts, 20 s hooks, then 10 s rest. 3 rounds make a set. Do 3 sets.',
+    'db-row': 'Your notes say 40 kg on the single-arm row. Start lighter in Week 1 and earn it back.',
+    'pull-up': '5 strict reps × 4 sets in March 2022. That’s the first target to beat.',
+    'overhead-press': 'Bar plus 5 kg per side × 4 sets in March 2022.',
+    'back-extension': '12 × 3 to finish back day.'
+  };
+  Object.keys(C).forEach(function (k) { if (E[k]) E[k].predrag = C[k]; });
+})(window.EXERCISES);

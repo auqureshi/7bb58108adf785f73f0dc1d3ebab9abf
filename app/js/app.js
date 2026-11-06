@@ -104,12 +104,16 @@
   }
 
   /* ---------- Demo (two-frame motion) ---------- */
-  var TALL = ['split-squat', 'trap-bar-deadlift'];
+  var TALL = ['split-squat', 'trap-bar-deadlift', 'landmine-rotation'];
   function demo(id, opts) {
     opts = opts || {};
     var e = EX[id];
     var tagName = opts.button ? 'button' : 'div';
     var attrs = opts.button ? ' type="button" data-open="' + id + '" aria-label="How to do ' + esc(e.name) + '"' : '';
+    if (e.img === false) {
+      return '<' + tagName + ' class="demo noimg"' + attrs + '>' + bodyMap(exWeights(e)) +
+        '<span class="tag">' + esc(e.pattern) + '</span>' + (opts.button ? '<span class="play">How to</span>' : '') + '</' + tagName + '>';
+    }
     var tall = TALL.indexOf(id) > -1 ? ' tall' : '';
     return '<' + tagName + ' class="demo' + tall + '" data-demo' + attrs + '>' +
       '<img src="img/' + id + '-0.jpg" alt="' + esc(e.name) + ': start position" loading="lazy" width="560" height="373">' +
@@ -283,10 +287,10 @@
       var variants = it.variants ? '<label class="sr" for="v-' + it.code + '-' + a.id + '">' + esc(a.name) + ' variation</label><select id="v-' + it.code + '-' + a.id + '" data-variant="' + it.code + '" data-ath="' + a.id + '">' +
         it.variants.map(function (v, vi) { return '<option value="' + vi + '"' + (l.v === vi ? ' selected' : '') + '>' + esc(v) + '</option>'; }).join('') + '</select>' : '';
       return '<div class="log ' + a.id + '"><span class="nm">' + esc(a.name) + '</span>' +
-        '<label class="wbox"><span class="sr">' + esc(a.name) + ' weight for ' + esc(e.name) + '</span><input id="w-' + it.code + '-' + a.id + '" data-w="' + it.code + '" data-ath="' + a.id + '" inputmode="decimal" autocomplete="off" placeholder="—" value="' + esc(l.w) + '"><span>kg</span></label>' +
+        '<label class="wbox"><span class="sr">' + esc(a.name) + ' weight for ' + esc(e.name) + '</span><input id="w-' + it.code + '-' + a.id + '" data-w="' + it.code + '" data-ath="' + a.id + '" inputmode="decimal" autocomplete="off" placeholder="' + esc((it.start && it.start[a.id]) || '—') + '" value="' + esc(l.w) + '"><span>kg</span></label>' +
         '<div class="sets">' + sets + '</div>' + variants +
         '<div class="feel" role="group" aria-label="' + esc(a.name) + ': how did it feel?">' + feel + '</div>' +
-        '<p class="advice" id="adv-' + it.code + '-' + a.id + '">' + esc(adv) + '</p>' +
+        '<p class="advice" id="adv-' + it.code + '-' + a.id + '">' + esc(adv) + '</p>' + pastLine(it, a.id) +
         '</div>';
     }).join('');
     return '<div class="item" id="item-' + it.code + '">' +
@@ -299,6 +303,13 @@
       '</div></div>' +
       '<div class="logs">' + logs + '</div>' +
       '</div>';
+  }
+
+  function pastLine(it, aid) {
+    var st = it.start && it.start[aid], p = it.past && it.past[aid];
+    if (!st && !p) return '';
+    return '<p class="past">' + (st ? 'Start around <b>' + esc(st) + ' kg</b>' : '') + (st && p ? ' · ' : '') +
+      (p ? 'Predrag days: ' + esc(p) : '') + '</p>';
   }
 
   /* ---------- Relay ---------- */
@@ -478,6 +489,7 @@
       '<section><h3>What it does</h3><p>' + esc(e.what) + '</p></section>' +
       '<section><h3>Why it’s good for you</h3><p>' + esc(e.why) + '</p></section>' +
       '<section><h3>How to do it</h3><ol class="cues">' + e.cues.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ol></section>' +
+      (e.predrag ? '<section class="quote"><h3>From Ali\u2019s sessions with Predrag</h3><p>' + esc(e.predrag) + '</p></section>' : '') +
       (e.mistakes && e.mistakes.length ? '<section><h3>Common mistakes</h3><ul class="bad">' + e.mistakes.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ul></section>' : '') +
       '<section class="scale"><div class="card easy"><h4>Make it easier</h4><p class="small">' + esc(e.easier) + '</p></div><div class="card hard"><h4>Make it harder</h4><p class="small">' + esc(e.harder) + '</p></div></section>' +
       '<section><h3>In real life</h3><p>' + esc(e.life) + '</p></section>';
@@ -584,7 +596,8 @@
       '<div class="score"><div class="card ali"><span class="lbl">Ali · sessions</span><b>' + PR.sessions.ali + '</b><span class="small muted">Target ' + esc(P.targets.ali) + '</span></div>' +
       '<div class="card aamna"><span class="lbl">Aamna · sessions</span><b>' + PR.sessions.aamna + '</b><span class="small muted">Target ' + esc(P.targets.aamna) + '</span></div>' +
       '<div class="card"><span class="lbl">Together</span><b>' + PR.sessions.together + '</b><span class="small muted">' + esc(P.targets.min) + '</span></div></div>' +
-      '<p class="lead">Next milestone: <b>' + esc(PR.nextMilestone) + '</b></p></div>';
+      '<p class="lead">Next milestone: <b>' + esc(PR.nextMilestone) + '</b></p>' +
+      (PR.history ? '<p class="lead">' + esc(PR.history) + '</p>' : '') + '</div>';
     h += '<div class="sec"><div class="grid2"><div class="card"><h3>Rules of the comeback</h3><ol class="rules" style="margin-top:10px">' +
       ['Showing up beats being perfect. Never miss twice.', 'Leave reps in the tank for the first 3 weeks.', 'Log everything. It takes 30 seconds.', 'Compete with your last session, not with each other.', 'Protein at every meal, walk every day, sleep 7+ hours.', 'Soreness is fine. Pain is not: swap the move and tell the coach.']
         .map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ol></div>' +

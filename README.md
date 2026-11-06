@@ -41,6 +41,7 @@ Messy reports are fine. A quick voice-to-text is plenty.
 | [`sessions/`](sessions/) | One sheet per workout, with targets, a log table, and coach notes |
 | [`log/progress.md`](log/progress.md) | Scoreboard, key lifts, benchmarks, milestones 🏅 |
 | [`profiles/`](profiles/) | About Ali and Aamna: history, goals, injuries, preferences |
+| [`history/`](history/) | Ali's past training with Predrag (raw notes plus the coach's summary), used to set starting weights |
 | [`app/`](app/) | The session app (published as a private claude.ai page). See CLAUDE.md for how it is updated |
 | [`templates/session-template.md`](templates/session-template.md) | The blueprint for new session sheets |
 | [`CLAUDE.md`](CLAUDE.md) | The coach's operating manual, so every new chat picks up exactly where the last one left off |

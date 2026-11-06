@@ -13,12 +13,16 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 - Trained consistently **2–3×/week for several years**.
 - **Last few months:** inconsistent.
 - **Comeback Day 1:** Sat 7 Nov 2026, together with Aamna.
-- **Old best working weights** (rough is fine):
-  - Squat:
-  - Bench:
-  - Deadlift:
-  - Overhead press:
-  - Pull-ups (reps):
+- **Trained with Predrag** (personal trainer), Dec 2021 to at least Dec 2022. Full notes: [`history/predrag-notes-raw.md`](../history/predrag-notes-raw.md).
+  The coach's reading is in [`history/summary.md`](../history/summary.md).
+- **Style Ali knows:** body-part split, arm pump supersets, cross-functional circuits, **boxing finishers**, 400 m runs at 12–13 km/h.
+- **Favourite exercise:** "bar left right", the landmine rotation (30 → 20 → 10 kg drop set, Dec 2022).
+- **Last-known numbers from those notes** (2021–22, treat as a floor; probably higher just before the break):
+  - Lat pulldown 45 kg × 12 × 4 · seated row 45 kg × 12 × 3 · pull-ups 5 × 4 sets
+  - Goblet squat 20 kg × 10 × 3 · Smith squat 15 kg per side · leg press 55 kg × 10
+  - Bench ~40 kg (10 kg plates, to confirm) · overhead press ~30 kg · clean & press 20 kg × 3
+  - 1-arm DB row 40 kg (to confirm)
+- **Still to ask:** what Ali was lifting just before the break.
 
 ## Goals
 - Lean, strong, functional.
@@ -33,7 +37,7 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 - None reported yet.
 
 ## Preferences
-- **Love:**
+- **Love:** "bar left right" (landmine rotation), boxing rounds, supersets, circuits.
 - **Hate:**
 
 ## Gym and equipment

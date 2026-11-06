@@ -32,7 +32,8 @@ Units: **kg**.
 
 ## Workflow A: they ask for a session
 
-1. **Read** `program/overview.md` (phase, week, templates, rules), `log/progress.md`, the last 2–3 files in `sessions/`, and both profiles.
+1. **Read** `program/overview.md` (phase, week, templates, rules), `log/progress.md`, the last 2–3 files in `sessions/`, both profiles,
+   and `history/summary.md` (Ali's past training with trainer Predrag: last-known numbers, favourite moves, cues).
 2. **Work out:** who's going (together, Ali alone, or Aamna alone), the date, time available, sleep, soreness, energy, any pain, and how busy the gym is.
    If something important is missing, ask briefly. Otherwise assume about 60 minutes and normal energy.
 3. **Choose the session type** using the rotation and the 48-hour rule (see overview). Don't load the same heavy pattern on consecutive days.
@@ -70,6 +71,8 @@ A phone-first web app published as a private claude.ai artifact.
   - `app/img/<id>-0.jpg` and `<id>-1.jpg`: start and finish photos from Free Exercise DB (public domain). The app crossfades them to animate each move.
 - **Muscle keys:** quadriceps, gluteal, hamstring, adductor, calves, abs, obliques, lower-back, upper-back, trapezius, chest,
   front-deltoids, back-deltoids, biceps, triceps, forearm, neck.
+- **Per-person hints:** a block item can carry `start: { ali: '16' }` (first-set guess in kg) and `past: { ali: '20 kg × 10' }`. They show under that person's log row.
+  An exercise's `predrag` field shows as "From Ali's sessions with Predrag". `img: false` shows a muscle map instead of photos.
 - **New session:** rewrite `SESSION` in `app/js/session.js`. Bump `S.id`, because logs are saved in the browser per id.
   Set `PLAN.currentWeek` and refresh `PROGRESS`. Every `ex` must exist in `EXERCISES`.
 - **New exercise:** add an entry to `exercises.js`. Find its ID in

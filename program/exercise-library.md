@@ -63,7 +63,7 @@ Key cues, plus an easier and a harder version of every move. Pick the version th
 | Ab wheel | Ribs down, roll out only as far as you can keep your back flat | Kneeling, short range | Longer range · from the toes |
 | Hanging knee / leg raise | Control the swing, tuck your pelvis at the top | Captain's chair | Straight legs · toes to bar |
 | Copenhagen plank | Top leg on a bench, lift your hips, stay straight (inner thigh and groin durability) | Knee on the bench | Foot on the bench · longer hold |
-| Landmine rotation | Rotate through your hips and feet, arms long, controlled | Lighter · half range | Heavier · faster |
+| Landmine rotation ("bar left right", Ali's favourite) | Arms long, pivot your back foot, turn from your hips, control it across | Bar only · smaller arc | Add plates · drop set 30 → 20 → 10 kg |
 
 ## Power (always fresh, always fast, stop before you slow down)
 | Exercise | Cues | Easier | Harder |
@@ -80,6 +80,7 @@ Key cues, plus an easier and a harder version of every move. Pick the version th
 | Rower | Legs → body → arms, then arms → body → legs. ~24–28 strokes/min for steady work. Don't just pull with your arms |
 | Bike / air bike | Easiest on the joints. Great for intervals |
 | Sled push | Arms long, low body angle, drive with your legs. Hard, joint-friendly, very "functional" |
+| Boxing rounds | Light on your feet, guard up, turn your hip into crosses and hooks, breathe out on every punch. 20 s on / 10 s off |
 | Incline walk | Zone 2 king: 10–12% incline, 4.5–5.5 km/h, no holding the rails |
 | **Zone 2** | Conversational pace. You can talk in full sentences, nose-breathing is mostly possible. Builds your aerobic base and burns fat |
 | **Intervals** | Hard (RPE 8–9) then easy, e.g. 30/30 or 20/40. Builds your engine fast |

@@ -82,6 +82,7 @@ On non-gym days, walk. Aim for 8–10k steps; an evening walk together counts.
 - **Synchro Burpees:** 5 × 10 burpees in sync, 30 s rest.
 - **Bike 30/30:** 30 s hard while partner rests, tag, 8–12 rounds each.
 - **Carry Ladder:** farmer carry 20 m, 40 m, 60 m, walked side by side (Synchro). Rest 45 s between rungs; go heavier each time through.
+- **Predrag Rounds (boxing):** 20 s jabs, 20 s uppercuts, 20 s hooks, 10 s rest, × 3 = one set. Do 2–3 sets, side by side. Ali already knows these from Predrag.
 - **Partner Chipper (Phase 3):** 100 cal row · 80 swings · 60 wall balls · 40 lunges · 20 burpees, split however you like. One works at a time.
 
 ---
@@ -147,7 +148,7 @@ Benchmarks, optional rep-max tests (e.g. a 5RM), photos and measurements. Compar
 | B1 Single leg | DB step-up 3 × 8/side | Bulgarian split squat 3 × 8 | Lateral lunge 3 × 6/side + BSS |
 | B2 Push | Push-up (pick a variant) 3 × 8–12 | Push-up 4 × 10–15 / deficit | Weighted or tempo push-up 4 × 8–12 |
 | C1 Engine | KB swing 3 × 12 | Sled push 4 × 20 m | Heavy sled 5 × 20 m |
-| C2 Anti-rotation | Pallof press 2 × 10/side | Half-kneeling Pallof 3 × 10 | Landmine rotation 3 × 8/side |
+| C2 Rotation | Pallof press 2 × 10/side *or* light "bar left right" (landmine rotation) 2 × 8/side | Landmine rotation 3 × 8/side | Landmine rotation, heavier, 3 × 8/side |
 | **Metcon** | 12-min YGIG AMRAP | 15-min partner intervals | 15–20-min Partner Chipper |
 
 ### S-U · Solo Upper: Strength & Arms
@@ -157,9 +158,9 @@ Benchmarks, optional rep-max tests (e.g. a 5RM), photos and measurements. Compar
 | A2 Pull | Seated cable row 3 × 10 | Pull-up / weighted 4 × 5–8 | Weighted pull-up 5 × 3–5 |
 | B1 Press | Half-kneeling DB press 3 × 8/side | Incline DB press 3 × 8–12 | Overhead or landmine press 3 × 6–8 |
 | B2 Pull | Lat pulldown 3 × 10–12 | Cable row 3 × 10–12 | Chest-supported row 4 × 8 |
-| C Delts/arms giant set | Lateral raise 2 × 15 · curl 2 × 12 · pushdown 2 × 12 | 3 × 12–15 each | 3 × 10–12 each, last set RPE 9 |
-| D Core | Side plank 2 × 30 s/side | Hanging knee raise 3 × 10 | Hanging leg raise 3 × 8–10 |
-| Finisher (opt.) | Bike 6 × 20 s hard / 40 s easy | Bike 8 × 20/40 | Ski or row 10 × 20/40 |
+| C Delts/arms giant set | Lateral raise 2 × 15 · curl + hammer superset 2 × 12 · pushdown 2 × 12 · face pull 2 × 15 | 3 × 12–15 each | 3 × 10–12 each, last set RPE 9 |
+| D Core | Side plank 2 × 30 s/side · "bar left right" 2 × 8/side (light) | Hanging knee raise 3 × 10 · landmine rotation 3 × 8 | Hanging leg raise 3 × 8–10 · landmine rotation drop set |
+| Finisher (opt.) | Bike 6 × 20 s hard / 40 s easy *or* Predrag Rounds × 2 | Bike 8 × 20/40 *or* boxing × 3 | Ski or row 10 × 20/40 |
 
 ### S-L · Solo Lower: Athletic Legs & Engine
 | Slot | Phase 1 | Phase 2 | Phase 3 |
