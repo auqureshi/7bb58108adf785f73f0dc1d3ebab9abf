@@ -219,6 +219,20 @@ p { margin: 0; }
 .seg button { border: 0; background: transparent; padding: 7px 12px; font-size: 13px; font-weight: 700; color: var(--muted); }
 .seg button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
 
+/* Interval timer */
+.tl-plan { display: flex; flex-wrap: wrap; gap: 6px; }
+.tl-phase { font-family: var(--display); font-weight: 800; font-style: italic; text-transform: uppercase; font-size: clamp(34px, 9vw, 52px); line-height: 1; color: var(--heat); }
+.tl-bar { height: 10px; border-radius: 5px; background: var(--bg); overflow: hidden; border: 1px solid var(--line); }
+.tl-bar span { display: block; height: 100%; width: 0; background: var(--heat); }
+.timer.work { border-color: var(--heat); }
+.timer.rest { border-color: var(--ali); background: radial-gradient(120% 90% at 100% 0%, color-mix(in oklab, var(--ali) 20%, var(--surface)) 0%, var(--surface) 60%); }
+.timer.rest .tl-phase { color: var(--ali); }
+.timer.rest .tl-bar span { background: var(--ali); }
+.timer.fin { border-color: var(--aamna); }
+.timer.fin .tl-phase { color: var(--aamna); }
+.timer.fin .tl-bar span { background: var(--aamna); }
+.pastcard { display: grid; gap: 12px; border-left: 4px solid var(--aamna); }
+
 /* Wrap-up */
 .wrapup { display: grid; gap: 10px; }
 .wrapup .log { grid-template-columns: 70px 1fr; }

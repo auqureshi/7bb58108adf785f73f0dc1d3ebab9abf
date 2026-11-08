@@ -73,7 +73,14 @@ A phone-first web app published as a private claude.ai artifact.
   front-deltoids, back-deltoids, biceps, triceps, forearm, neck.
 - **Per-person hints:** a block item can carry `start: { ali: '16' }` (first-set guess in kg) and `past: { ali: '20 kg × 10' }`. They show under that person's log row.
   An exercise's `predrag` field shows as "From Ali's sessions with Predrag". `img: false` shows a muscle map instead of photos.
+- **More item fields:** `tip: { ali, aamna }` (short coaching text), `noWeight: true` (holds such as planks),
+  and `variants: [...]` (a per-person dropdown, e.g. assisted or strict). `past` text prints as written, so include its label ("Predrag days: …", "Last time: …").
+  `SESSION.note` shows under the hero, which suits a soreness check or other warning.
+- **Finisher types:** `type: 'relay'` (`legs`, `leg`: a stopwatch that alternates partners), or `type: 'intervals'` (`sets`, `rounds`, `setRest`,
+  `segments: [{ label, secs, rest? }]`: a beeping round timer, used for boxing and bike intervals).
 - **New session:** rewrite `SESSION` in `app/js/session.js`. Bump `S.id`, because logs are saved in the browser per id.
+  Copy the previous session (trimmed: id, week, num, type, dateLabel, title, blocks' items, finisher, warm-up and cool-down counts) into `PAST_SESSIONS`.
+  If its report wasn't sent, the app then shows a "Build Session N report" card. Remove an entry once its results are logged.
   Set `PLAN.currentWeek` and refresh `PROGRESS`. Every `ex` must exist in `EXERCISES`.
 - **New exercise:** add an entry to `exercises.js`. Find its ID in
   `https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json`, then download `.../exercises/<ID>/0.jpg` and `1.jpg`.

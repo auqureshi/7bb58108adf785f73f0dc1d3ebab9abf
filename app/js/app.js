@@ -39,6 +39,7 @@
   state.warm = state.warm || {};
   state.cool = state.cool || {};
   state.relay = state.relay || { starter: ATH[0].id, t0: null, splits: [] };
+  state.timer = state.timer || { t0: null, stopped: null, done: false };
   state.wrap = state.wrap || {};
   ATH.forEach(function (a) { state.wrap[a.id] = state.wrap[a.id] || { hard: 6, hurt: '' }; });
   state.notes = state.notes || '';
@@ -179,7 +180,10 @@
       '<div class="chips" data-rise><span class="chip hot">' + esc(S.type) + '</span><span class="chip">' + esc(S.template) + '</span><span class="chip">' + esc(S.phase) + '</span><span class="chip">~' + S.minutes + ' min</span><span class="chip">RPE ' + esc(S.rpe) + ' all session</span></div>' +
       '<p class="brief" data-rise>' + esc(S.brief) + '</p>' +
       '<ol class="jobs" data-rise>' + S.jobs.map(function (j) { return '<li>' + esc(j) + '</li>'; }).join('') + '</ol>' +
+      (S.note ? '<p class="lead" data-rise>' + esc(S.note) + '</p>' : '') +
       '</div>';
+    var pc = pastCards();
+    if (pc) h += '<div class="sec">' + pc + '</div>';
 
     h += '<div class="sec"><div class="grid2">' +
       '<div class="card" data-rise><h3>What today works</h3><p class="muted small" style="margin:2px 0 12px">Brighter means more sets for that muscle.</p>' +
@@ -203,7 +207,7 @@
     S.blocks.forEach(function (b) { h += renderBlock(b); });
 
     // Finisher
-    h += renderRelay();
+    h += S.finisher.type === 'intervals' ? renderTimer() : renderRelay();
 
     // Cool-down
     h += '<div class="sec" id="cooldown"><div class="sec-head"><h2>Cool-down</h2><span class="meta">' + S.cooldown.minutes + ' min</span></div>' +
@@ -287,7 +291,8 @@
       var variants = it.variants ? '<label class="sr" for="v-' + it.code + '-' + a.id + '">' + esc(a.name) + ' variation</label><select id="v-' + it.code + '-' + a.id + '" data-variant="' + it.code + '" data-ath="' + a.id + '">' +
         it.variants.map(function (v, vi) { return '<option value="' + vi + '"' + (l.v === vi ? ' selected' : '') + '>' + esc(v) + '</option>'; }).join('') + '</select>' : '';
       return '<div class="log ' + a.id + '"><span class="nm">' + esc(a.name) + '</span>' +
-        '<label class="wbox"><span class="sr">' + esc(a.name) + ' weight for ' + esc(e.name) + '</span><input id="w-' + it.code + '-' + a.id + '" data-w="' + it.code + '" data-ath="' + a.id + '" inputmode="decimal" autocomplete="off" placeholder="' + esc((it.start && it.start[a.id]) || '—') + '" value="' + esc(l.w) + '"><span>kg</span></label>' +
+        (it.noWeight ? '<span></span>' :
+        '<label class="wbox"><span class="sr">' + esc(a.name) + ' weight for ' + esc(e.name) + '</span><input id="w-' + it.code + '-' + a.id + '" data-w="' + it.code + '" data-ath="' + a.id + '" inputmode="decimal" autocomplete="off" placeholder="' + esc(/^\d/.test((it.start && it.start[a.id]) || '') ? it.start[a.id] : '—') + '" value="' + esc(l.w) + '"><span>kg</span></label>') +
         '<div class="sets">' + sets + '</div>' + variants +
         '<div class="feel" role="group" aria-label="' + esc(a.name) + ': how did it feel?">' + feel + '</div>' +
         '<p class="advice" id="adv-' + it.code + '-' + a.id + '">' + esc(adv) + '</p>' + pastLine(it, a.id) +
@@ -306,10 +311,12 @@
   }
 
   function pastLine(it, aid) {
-    var st = it.start && it.start[aid], p = it.past && it.past[aid];
-    if (!st && !p) return '';
-    return '<p class="past">' + (st ? 'Start around <b>' + esc(st) + ' kg</b>' : '') + (st && p ? ' · ' : '') +
-      (p ? 'Predrag days: ' + esc(p) : '') + '</p>';
+    var st = it.start && it.start[aid], p = it.past && it.past[aid], tip = it.tip && it.tip[aid];
+    var parts = [];
+    if (st) parts.push('Start around <b>' + esc(st) + (/^\d/.test(st) ? ' kg' : '') + '</b>');
+    if (p) parts.push(esc(p));
+    if (tip) parts.push(esc(tip));
+    return parts.length ? '<p class="past">' + parts.join(' · ') + '</p>' : '';
   }
 
   /* ---------- Relay ---------- */
@@ -318,7 +325,8 @@
     var t = Math.max(0, ms), m = Math.floor(t / 60000), s = Math.floor((t % 60000) / 1000), d = Math.floor((t % 1000) / 100);
     return m + ':' + (s < 10 ? '0' : '') + s + '.' + d;
   }
-  function legAth(i) { return i % 2 === 0 ? state.relay.starter : other(state.relay.starter); }
+  function legAthR(R, i) { return i % 2 === 0 ? R.starter : other(R.starter); }
+  function legAth(i) { return legAthR(state.relay, i); }
   function renderRelay() {
     var F = S.finisher;
     return '<div class="sec" id="finisher"><div class="sec-head"><h2>Finisher</h2><span class="meta">~8 min · RPE ' + esc(F.rpe) + '</span></div>' +
@@ -383,6 +391,114 @@
     }
   }
 
+  /* ---------- Interval timer (boxing rounds, intervals) ---------- */
+  var tl = null, timerRaf = 0, timerAC = null, LEAD = 3000;
+  function timeline() {
+    if (tl) return tl;
+    var F = S.finisher, out = [], t = 0;
+    for (var s = 0; s < F.sets; s++) {
+      for (var r = 0; r < F.rounds; r++) {
+        for (var k = 0; k < F.segments.length; k++) {
+          var g = F.segments[k];
+          out.push({ label: g.label, rest: !!g.rest, start: t, secs: g.secs, set: s + 1, round: r + 1 });
+          t += g.secs * 1000;
+        }
+      }
+      if (s < F.sets - 1 && F.setRest) { out.push({ label: 'Rest between sets', rest: true, start: t, secs: F.setRest, set: s + 1, round: F.rounds }); t += F.setRest * 1000; }
+    }
+    while (out.length && out[out.length - 1].rest) { t -= out.pop().secs * 1000; }
+    tl = { segs: out, total: t };
+    return tl;
+  }
+  function fmtS(ms) { var x = Math.max(0, Math.ceil(ms / 1000)); return Math.floor(x / 60) + ':' + (x % 60 < 10 ? '0' : '') + (x % 60); }
+  function renderTimer() {
+    var F = S.finisher, T = timeline();
+    return '<div class="sec" id="finisher"><div class="sec-head"><h2>Finisher</h2><span class="meta">~' + Math.round(T.total / 60000) + ' min · RPE ' + esc(F.rpe) + '</span></div>' +
+      '<div class="relay timer" id="timer" data-rise>' +
+      '<div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">' +
+      '<div><p class="eyebrow">' + esc(F.name) + ' · ' + F.sets + ' sets × ' + F.rounds + ' rounds</p><p class="small" style="margin-top:4px">' + esc(F.how) + '</p></div>' +
+      '<button class="more" type="button" data-open="' + F.ex + '" style="margin:0">How to →</button></div>' +
+      '<div class="tl-plan">' + F.segments.map(function (g) { return '<span class="chip' + (g.rest ? '' : ' hot') + '">' + g.secs + ' s ' + esc(g.label) + '</span>'; }).join('') +
+      '<span class="chip">× ' + F.rounds + ' = 1 set</span>' + (F.setRest ? '<span class="chip">' + F.setRest + ' s between sets</span>' : '') + '</div>' +
+      '<p class="tl-phase" id="tl-phase">Ready</p>' +
+      '<div class="clock num" id="tl-clock">' + fmtS(T.segs[0].secs * 1000) + '</div>' +
+      '<div class="tl-bar" aria-hidden="true"><span id="tl-fill"></span></div>' +
+      '<p class="turn" id="tl-meta" aria-live="polite"></p>' +
+      '<div class="btns" id="tl-btns"></div>' +
+      '<p class="muted small">' + esc(F.pace) + ' ' + esc(F.alt) + '</p>' +
+      '</div></div>';
+  }
+  function timerUpdate() {
+    var T = timeline(), F = S.finisher, st = state.timer, box = $('#timer');
+    if (!box) return;
+    var phase = $('#tl-phase'), clock = $('#tl-clock'), fill = $('#tl-fill'), meta = $('#tl-meta');
+    var running = !!st.t0 && !st.done;
+    var e = running ? Date.now() - st.t0 : 0;
+    if (running && e >= T.total) { st.done = true; st.t0 = null; save(); running = false; }
+    var label, left, pct = 0, cls = '', metaTxt;
+    if (st.done) {
+      label = 'Done!'; left = 0; pct = 100; cls = 'fin'; metaTxt = 'All ' + F.sets + ' sets finished. Great work, both of you.';
+    } else if (!running) {
+      label = st.stopped ? 'Stopped' : 'Ready'; left = T.segs[0].secs * 1000;
+      metaTxt = st.stopped ? 'Stopped in set ' + st.stopped.set + ' of ' + F.sets + '. Start again whenever you’re ready.' : 'Press start, then you get 3 seconds to get in your stance.';
+    } else if (e < 0) {
+      label = 'Get ready'; left = -e; cls = 'rest'; metaTxt = 'First up: ' + T.segs[0].label;
+    } else {
+      var i = 0; while (i < T.segs.length - 1 && T.segs[i + 1].start <= e) i++;
+      var g = T.segs[i], into = e - g.start, nx = T.segs[i + 1];
+      label = g.label; left = g.secs * 1000 - into; pct = Math.min(100, into / (g.secs * 10)); cls = g.rest ? 'rest' : 'work';
+      metaTxt = 'Set ' + g.set + ' of ' + F.sets + ' · Round ' + g.round + ' of ' + F.rounds + (nx ? ' · Next: ' + nx.label : ' · Last one!');
+      if (box.getAttribute('data-seg') !== String(i)) { box.setAttribute('data-seg', String(i)); anim(phase, { scale: [1.15, 1], opacity: [0.4, 1] }, { duration: 0.3 }); }
+    }
+    box.className = 'relay timer ' + cls;
+    if (phase.textContent !== label) phase.textContent = label;
+    clock.textContent = fmtS(left);
+    fill.style.width = pct + '%';
+    if (meta.textContent !== metaTxt) meta.textContent = metaTxt;
+    var key = running ? 'run' : (st.done ? 'done' : (st.stopped ? 'stopped' : 'idle'));
+    var bw = $('#tl-btns');
+    if (bw.getAttribute('data-k') !== key) {
+      bw.setAttribute('data-k', key);
+      bw.innerHTML = running ? '<button class="btn big" type="button" data-timer="stop">Stop</button>' :
+        '<button class="btn go big" type="button" data-timer="start">' + (key === 'idle' ? 'Start ' + esc(F.name) : 'Start again') + '</button>';
+    }
+    cancelAnimationFrame(timerRaf);
+    if (running) timerRaf = requestAnimationFrame(timerUpdate);
+  }
+  function timerBeeps(T) {
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+      if (timerAC) { try { timerAC.close(); } catch (e0) { /* ignore */ } }
+      var ac = new AC(); timerAC = ac;
+      var base = ac.currentTime + LEAD / 1000;
+      var beep = function (at, f, d) {
+        var o = ac.createOscillator(), g = ac.createGain(); o.type = 'sine'; o.frequency.value = f;
+        g.gain.setValueAtTime(0.0001, at); g.gain.exponentialRampToValueAtTime(0.28, at + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, at + d);
+        o.connect(g); g.connect(ac.destination); o.start(at); o.stop(at + d + 0.02);
+      };
+      [3, 2, 1].forEach(function (n) { beep(base - n, 660, 0.12); });
+      T.segs.forEach(function (g) { var at = base + g.start / 1000; if (g.rest) beep(at, 523, 0.3); else { beep(at, 988, 0.12); beep(at + 0.16, 988, 0.12); } });
+      var end = base + T.total / 1000; [0, 0.2, 0.4].forEach(function (d) { beep(end + d, 1175, 0.15); });
+    } catch (e) { timerAC = null; }
+  }
+  function timerStart() {
+    var st = state.timer;
+    st.t0 = Date.now() + LEAD; st.done = false; st.stopped = null; save();
+    timerBeeps(timeline());
+    timerUpdate();
+  }
+  function timerStop() {
+    var st = state.timer, T = timeline();
+    if (st.t0) {
+      var e = Date.now() - st.t0, i = 0;
+      while (i < T.segs.length - 1 && T.segs[i + 1].start <= e) i++;
+      st.stopped = { set: e < 0 ? 1 : T.segs[i].set };
+    }
+    st.t0 = null; save();
+    if (timerAC) { try { timerAC.close(); } catch (e1) { /* ignore */ } timerAC = null; }
+    timerUpdate();
+  }
+
   /* ---------- Rest timer ---------- */
   var rest = { on: false, end: 0, raf: 0, ctl: null, ac: null };
   var CIRC = 2 * Math.PI * 30;
@@ -430,42 +546,76 @@
   }
 
   /* ---------- Report ---------- */
-  function reportText() {
+  var PAST = window.PAST_SESSIONS || [];
+  function stL(st, code, ath) {
+    st.log = st.log || {}; st.log[code] = st.log[code] || {};
+    st.log[code][ath] = st.log[code][ath] || { w: '', sets: [], feel: '', v: 0 };
+    return st.log[code][ath];
+  }
+  function itemsOf(sess) { var list = []; sess.blocks.forEach(function (b) { b.items.forEach(function (i) { list.push(i); }); }); return list; }
+  function finisherReport(sess, st) {
+    var F = sess.finisher, N = F.name.toUpperCase();
+    if (F.type === 'intervals') {
+      var T = st.timer || {};
+      if (T.done) return N + ': all ' + F.sets + ' sets done';
+      if (T.stopped) return N + ': stopped in set ' + T.stopped.set + ' of ' + F.sets;
+      return N + ': not done';
+    }
+    var R = st.relay || { splits: [], starter: ATH[0].id };
+    if (!R.splits || !R.splits.length) return N + ': not timed';
+    var parts = R.splits.map(function (t, i) { return athName(legAthR(R, i)) + ' ' + fmt(t - (i ? R.splits[i - 1] : 0)); });
+    return N + ': ' + (R.splits.length >= F.legs ? fmt(R.splits[F.legs - 1]) + ' total' : R.splits.length + '/' + F.legs + ' legs') + ' (' + parts.join(', ') + ')';
+  }
+  function reportFor(sess, st) {
     var lines = [];
-    lines.push('THE COMEBACK · Week ' + S.week + ' Session ' + S.num + ' · ' + S.type + ' · ' + S.dateLabel);
+    lines.push('THE COMEBACK · Week ' + sess.week + ' Session ' + sess.num + ' · ' + sess.type + ' · ' + sess.dateLabel);
     ATH.forEach(function (a) {
-      lines.push('');
-      lines.push(a.name.toUpperCase());
-      todayItems().forEach(function (it) {
-        var l = L(it.code, a.id), e = EX[it.ex];
+      lines.push(''); lines.push(a.name.toUpperCase());
+      itemsOf(sess).forEach(function (it) {
+        var l = stL(st, it.code, a.id), e = EX[it.ex] || { name: it.ex };
         var name = it.variants ? it.variants[l.v || 0] : e.name;
-        var w = String(l.w || '').trim();
-        var sets = l.sets.filter(Boolean).length;
+        var w = String(l.w || '').trim(), unit = it.unit || 'kg';
+        var blank = (unit.match(/blank = ([^)]*)\)/) || [])[1];
+        var sets = (l.sets || []).filter(Boolean).length;
         var feel = (FEEL.filter(function (f) { return f.k === l.feel; })[0] || {});
-        var wt = w ? w + ' kg' + (it.unit.indexOf('per hand') > -1 ? '/hand' : '') : (it.unit.indexOf('bodyweight') > -1 ? 'bodyweight' : 'no weight logged');
-        lines.push('- ' + it.code + ' ' + name + ': ' + wt + ' · ' + sets + '/' + it.sets + ' sets of ' + it.reps + (feel.t ? ' · felt ' + feel.t.toLowerCase() + ' (' + feel.s + ')' : ''));
+        var wt = it.noWeight ? '' : (w ? w + ' ' + unit.replace(/\s*\(blank[^)]*\)/, '').replace('kg per hand', 'kg/hand') : (it.variants && blank ? '' : (blank || 'no weight logged')));
+        lines.push('- ' + it.code + ' ' + name + ': ' + (wt ? wt + ' · ' : '') + sets + '/' + it.sets + ' sets of ' + it.reps + (feel.t ? ' · felt ' + feel.t.toLowerCase() + ' (' + feel.s + ')' : ''));
       });
-      var wv = state.wrap[a.id];
+      var wv = (st.wrap && st.wrap[a.id]) || { hard: '?', hurt: '' };
       lines.push('- Overall: ' + wv.hard + '/10 · Hurt: ' + (String(wv.hurt || '').trim() || 'nothing'));
     });
-    var R = state.relay, F = S.finisher;
-    lines.push('');
-    if (R.splits.length) {
-      var parts = R.splits.map(function (t, i) { return athName(legAth(i)) + ' ' + fmt(t - (i ? R.splits[i - 1] : 0)); });
-      lines.push(F.name.toUpperCase() + ': ' + (R.splits.length >= F.legs ? fmt(R.splits[F.legs - 1]) + ' total' : R.splits.length + '/' + F.legs + ' legs') + ' (' + parts.join(', ') + ')');
-    } else {
-      lines.push(F.name.toUpperCase() + ': not timed');
-    }
-    var w = state.warm, c = state.cool;
-    lines.push('Warm-up: ' + Object.keys(w).filter(function (k) { return w[k]; }).length + '/' + S.warmup.items.length + ' · Cool-down: ' + Object.keys(c).filter(function (k) { return c[k]; }).length + '/' + S.cooldown.items.length);
-    if (String(state.notes || '').trim()) { lines.push(''); lines.push('Notes: ' + state.notes.trim()); }
+    lines.push(''); lines.push(finisherReport(sess, st));
+    var cnt = function (o) { o = o || {}; return Object.keys(o).filter(function (k) { return o[k]; }).length; };
+    lines.push('Warm-up: ' + cnt(st.warm) + '/' + sess.warmup.items.length + ' · Cool-down: ' + cnt(st.cool) + '/' + sess.cooldown.items.length);
+    if (String(st.notes || '').trim()) { lines.push(''); lines.push('Notes: ' + st.notes.trim()); }
     return lines.join('\n');
   }
-  function openReport() {
+  function reportText() { return reportFor(S, state); }
+  function loadState(id) { try { return JSON.parse(localStorage.getItem('comeback:' + id)) || null; } catch (e) { return null; } }
+  function hasData(st) {
+    if (!st || st.hidden) return false;
+    var any = false;
+    Object.keys(st.log || {}).forEach(function (c) {
+      Object.keys(st.log[c] || {}).forEach(function (a) {
+        var l = st.log[c][a] || {};
+        if (String(l.w || '').trim() || (l.sets || []).some(Boolean) || l.feel) any = true;
+      });
+    });
+    return any || !!(st.relay && st.relay.splits && st.relay.splits.length) || !!(st.timer && (st.timer.done || st.timer.stopped));
+  }
+  function pastCards() {
+    return PAST.filter(function (p) { return hasData(loadState(p.id)); }).map(function (p) {
+      return '<div class="card pastcard" data-rise><div><p class="eyebrow">Report not sent yet</p><h3>Session ' + p.num + ' · ' + esc(p.title) + '</h3>' +
+        '<p class="small muted" style="margin-top:4px">Your logs from ' + esc(p.dateLabel) + ' are still saved on this phone. Send them so the coach can set your next weights.</p></div>' +
+        '<div class="btns"><button class="btn go" type="button" data-past-report="' + p.id + '">Build Session ' + p.num + ' report</button>' +
+        '<button class="btn" type="button" data-past-hide="' + p.id + '">Already sent</button></div></div>';
+    }).join('');
+  }
+  function openReport(text, title) {
     var body = $('#sheet-body');
-    body.innerHTML = '<p class="eyebrow">Report to coach</p><h2 id="sheet-title">Your session report</h2>' +
+    body.innerHTML = '<p class="eyebrow">Report to coach</p><h2 id="sheet-title">' + esc(title || 'Your session report') + '</h2>' +
       '<p class="muted">Copy this and paste it into your chat with the coach.</p>' +
-      '<label class="sr" for="report">Session report</label><textarea class="field report" id="report" readonly>' + esc(reportText()) + '</textarea>' +
+      '<label class="sr" for="report">Session report</label><textarea class="field report" id="report" readonly>' + esc(text || reportText()) + '</textarea>' +
       '<div class="btns"><button class="btn go big" type="button" data-copy>Copy report</button></div><p class="toast" id="toast" aria-live="polite"></p>';
     showSheet();
   }
@@ -475,7 +625,7 @@
     var e = EX[id]; if (!e) return;
     var it = itemFor(id);
     var inWarm = S.warmup.items.concat(S.cooldown.items).filter(function (x) { return x.ex === id; })[0];
-    var rxToday = it ? ('Today: ' + it.sets + ' × ' + it.reps + ' at RPE ' + it.rpe) : (inWarm ? 'Today: ' + inWarm.dose : (S.finisher.ex === id ? 'Today: ' + S.finisher.name + ', ' + S.finisher.legs + ' × ' + S.finisher.leg : ''));
+    var rxToday = it ? ('Today: ' + it.sets + ' × ' + it.reps + ' at RPE ' + it.rpe) : (inWarm ? 'Today: ' + inWarm.dose : (S.finisher.ex === id ? 'Today: ' + S.finisher.name + (S.finisher.type === 'intervals' ? ', ' + S.finisher.sets + ' sets × ' + S.finisher.rounds + ' rounds' : ', ' + S.finisher.legs + ' × ' + S.finisher.leg) : ''));
     var body = $('#sheet-body');
     body.innerHTML =
       '<div>' + demo(id) + '</div>' +
@@ -630,7 +780,7 @@
         el.innerHTML = v === 'today' ? renderToday() : v === 'moves' ? renderMoves() : renderPlan();
         rendered[v] = true;
         wireDemos(el);
-        if (v === 'today') relayUpdate();
+        if (v === 'today') { if (S.finisher.type === 'intervals') timerUpdate(); else relayUpdate(); }
       }
       el.classList.toggle('on', v === view);
     });
@@ -703,6 +853,18 @@
       else if (d.relay === 'undo') { R.splits.pop(); }
       else if (d.relay === 'reset') { R.t0 = null; R.splits = []; }
       save(); relayUpdate(); return;
+    }
+    if (d.timer) { if (d.timer === 'start') timerStart(); else timerStop(); return; }
+    if (d.pastReport) {
+      var ps = PAST.filter(function (p) { return p.id === d.pastReport; })[0];
+      if (ps) openReport(reportFor(ps, loadState(ps.id) || {}), 'Session ' + ps.num + ' report');
+      return;
+    }
+    if (d.pastHide) {
+      var hs = loadState(d.pastHide) || {}; hs.hidden = true;
+      try { localStorage.setItem('comeback:' + d.pastHide, JSON.stringify(hs)); } catch (e2) { /* ignore */ }
+      var card = t.closest('.pastcard'); if (card) card.remove();
+      return;
     }
     if (t.id === 'rest') { if (rest.on) restStop(); else restStart(60); return; }
     if (d.report !== undefined && t.hasAttribute('data-report')) { openReport(); return; }
