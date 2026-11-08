@@ -33,9 +33,9 @@ window.SESSION = {
       how: 'One of you does A1 while the other does A2, then swap. Once you’ve both done both, that’s 1 round. Rest about 60 s.',
       note: 'Pull-ups: stop every set with 3–4 reps left, even if you feel great.',
       items: [
-        { code: 'A1', ex: 'hip-thrust', sets: 3, reps: '10', rpe: '6', unit: 'kg (DB or bar on hips)',
-          start: { ali: '20' },
-          tip: { ali: 'New lift for you: first set with one 20 kg dumbbell, then adjust', aamna: 'Feeler set with bodyweight, then add a dumbbell across your hips' } },
+        { code: 'A1', ex: 'back-extension', sets: 3, reps: '12', rpe: '6', unit: 'kg plate at chest (blank = bodyweight)',
+          past: { ali: 'Predrag days: 12 × 3 to finish back day' },
+          tip: { ali: 'Bodyweight for set 1. Hold a 5–10 kg plate only if it feels easy', aamna: 'Bodyweight only today. Toes turned out slightly and squeeze your glutes to come up' } },
         { code: 'A2', ex: 'pull-up', sets: 3, reps: '5–6', rpe: '6', unit: 'kg assistance (blank = strict)',
           variants: ['Assisted machine', 'Band-assisted', 'Strict', 'Slow negatives (3–5 s down)'],
           past: { ali: 'Predrag days: 5 strict × 4 sets (Mar 2022)' },
@@ -92,9 +92,9 @@ window.SESSION = {
     ],
     extra: 'Finish with 5 slow breaths lying down (4 s in, 6 s out). Tomorrow is a rest day.'
   },
-  planB: 'Very sore or short on time (35 min): 5-min bike, Block A × 2 (glute bridge on the floor instead of hip thrust), Block B × 2, then 1 set of Predrag Rounds. Skip Block C.',
+  planB: 'Very sore or short on time (35 min): 5-min bike, Block A × 2 (back extensions with a smaller range), Block B × 2, then 1 set of Predrag Rounds. Skip Block C.',
   swaps: [
-    ['Hip thrust', 'Glute bridge on the floor, or the hip-thrust machine'],
+    ['Back extension', 'Hip abduction machine 3 × 15, or a cable pull-through 3 × 12'],
     ['Pull-up', 'Lat pulldown 3 × 10'],
     ['Half-kneeling press', 'Seated DB press, or the shoulder-press machine'],
     ['Face pull', 'Band pull-apart, or the rear-delt fly machine'],
