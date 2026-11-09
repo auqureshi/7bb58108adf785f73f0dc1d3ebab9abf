@@ -6,113 +6,121 @@ window.ATHLETES = [
 ];
 
 window.SESSION = {
-  id: '2026-11-08_W1S2',
-  week: 1, num: 2,
-  date: '2026-11-08', dateLabel: 'Sun 8 Nov 2026',
-  title: 'Round Two',
-  type: 'Together', template: 'T-B · Pull, Press & Glutes', phase: 'Phase 1 · Re-Entry',
-  minutes: 55, rpe: '6',
-  brief: 'Second day in a row, so today trains what yesterday didn’t hit hard: pulling up, pressing overhead, glutes and core, with a boxing finish. Sore legs are normal. Moving them gently today helps them recover faster. Everything stays at RPE 6.',
-  jobs: ['Loosen up the soreness', 'Set your pull-up baseline', 'Learn "bar left right"', 'Box it out together'],
-  note: 'Soreness check: if your legs are 7/10 sore or worse, or any joint hurts, use Plan B at the bottom of the page.',
+  id: '2026-11-10_W1S3_aamna',
+  week: 1, num: 3,
+  date: '2026-11-10', dateLabel: 'Tue 10 Nov 2026',
+  title: 'Solo Strong',
+  athletes: ['aamna'],
+  type: 'Solo · Aamna', template: 'T-C · Athletic & Engine (solo version)', phase: 'Phase 1 · Re-Entry',
+  minutes: 50, rpe: '6',
+  brief: 'Your first solo session, Aamna. Everything here is easy to set up on your own: dumbbells, one cable machine, a bench and the rower. You trained Saturday and Sunday, so today makes three sessions and completes your Week 1 target.',
+  jobs: ['Show up solo', 'Goblet squat: Saturday’s weight or one step up', 'Learn the step-up', 'Finish strong on the rower'],
+  note: 'Feeling very sore or run down? Use Plan B at the bottom. Sharp or joint pain means stop that exercise and use its swap.',
   warmup: {
-    minutes: 10,
-    cardio: '6 min easy bike side by side. It flushes yesterday’s soreness out of your legs. Chatting pace.',
+    minutes: 8,
+    cardio: '5 min incline walk or easy bike, slow enough to hold a conversation.',
     items: [
       { ex: 'worlds-greatest-stretch', dose: '3 / side' },
-      { ex: 'cat-cow', dose: '× 6' },
       { ex: 'glute-bridge', dose: '× 12, 2 s squeeze' },
-      { ex: 'band-pull-apart', dose: '× 15' },
-      { ex: 'dead-bug', dose: '5 / side' },
-      { ex: 'bodyweight-squat', dose: '× 8, slow, to loosen the legs' }
+      { ex: 'band-pull-apart', dose: '× 15 (no band: arm circles)' },
+      { ex: 'bodyweight-squat', dose: '× 8, 3 s down, pause at the bottom' },
+      { ex: 'inchworm', dose: '× 4' }
     ]
   },
   blocks: [
     {
-      id: 'A', format: 'Swap Stations', rounds: 3, minutes: 12, rest: 60,
-      how: 'One of you does A1 while the other does A2, then swap. Once you’ve both done both, that’s 1 round. Rest about 60 s.',
-      note: 'Pull-ups: stop every set with 3–4 reps left, even if you feel great.',
+      id: 'A', format: 'Superset', rounds: 3, minutes: 12, rest: 60,
+      how: 'Do A1, then go straight to A2, then rest about 60 s. That’s 1 round. Grab your dumbbell and take it near the cable row so you don’t lose your spot.',
       items: [
-        { code: 'A1', ex: 'back-extension', sets: 3, reps: '12', rpe: '6', unit: 'kg plate at chest (blank = bodyweight)',
-          past: { ali: 'Predrag days: 12 × 3 to finish back day' },
-          tip: { ali: 'Bodyweight for set 1. Hold a 5–10 kg plate only if it feels easy', aamna: 'Bodyweight only today. Toes turned out slightly and squeeze your glutes to come up' } },
-        { code: 'A2', ex: 'pull-up', sets: 3, reps: '5–6', rpe: '6', unit: 'kg assistance (blank = strict)',
-          variants: ['Assisted machine', 'Band-assisted', 'Strict', 'Slow negatives (3–5 s down)'],
-          past: { ali: 'Predrag days: 5 strict × 4 sets (Mar 2022)' },
-          tip: { ali: 'Try strict and stop at 4–5 clean reps. If you get 3 or fewer, add light assistance', aamna: 'Assisted machine: pick the assistance that gives 6 smooth reps with 3–4 left. More kg = easier' } }
+        { code: 'A1', ex: 'goblet-squat', sets: 3, reps: '10', rpe: '6', unit: 'kg',
+          tip: { aamna: 'Start with Saturday’s weight. If 10 reps felt easy then, go one dumbbell up' } },
+        { code: 'A2', ex: 'cable-row', sets: 3, reps: '12', rpe: '6', unit: 'kg',
+          tip: { aamna: 'Pick a weight you could pull about 15 times. Chest tall, no rocking' } }
       ]
     },
     {
-      id: 'B', format: 'Swap Stations', rounds: 3, minutes: 12, rest: 60,
-      how: 'Same flow: one on B1, one on B2, then swap. Rest about 60 s after each round.',
-      note: 'Face pulls are light on purpose. They protect your shoulders.',
+      id: 'B', format: 'Superset', rounds: 3, minutes: 12, rest: 60,
+      how: 'B1 then B2, then rest about 60 s. Use the same bench for both: step up onto it, then put your hands on it for push-ups.',
       items: [
-        { code: 'B1', ex: 'half-kneeling-press', sets: 3, reps: '8 / side', rpe: '6', unit: 'kg',
-          start: { ali: '12' },
-          past: { ali: 'Predrag days: ~30 kg barbell press × 4 sets' },
-          tip: { aamna: 'Start light and use the Easy / Right / Heavy buttons' } },
-        { code: 'B2', ex: 'face-pull', sets: 3, reps: '15', rpe: '6–7', unit: 'kg' }
+        { code: 'B1', ex: 'step-up', sets: 3, reps: '8 / side', rpe: '6', unit: 'kg (each DB, blank = bodyweight)',
+          tip: { aamna: 'Round 1 with bodyweight on a knee-height box or bench. Hold light dumbbells only if it feels easy' } },
+        { code: 'B2', ex: 'push-up', sets: 3, reps: '8–10', rpe: '6', unit: 'pick your height', noWeight: true,
+          variants: ['Hands on a bench', 'Hands on a Smith bar (higher = easier)', 'Knees on the floor', 'Full push-up'],
+          tip: { aamna: 'Choose the height where 8–10 reps leave 3–4 in the tank' } }
       ]
     },
     {
-      id: 'C', format: 'Core & carry trio', rounds: 2, minutes: 10, rest: 45,
-      how: 'Take turns on the landmine. Carry side by side, then side plank together.',
+      id: 'C', format: 'Core & carry', rounds: 2, minutes: 8, rest: 45,
+      how: 'C1, then C2, then rest about 45 s.',
       items: [
-        { code: 'C1', ex: 'landmine-rotation', sets: 2, reps: '8 / side', rpe: '6', unit: 'kg added (blank = bar only)',
-          start: { ali: '5' },
-          past: { ali: 'Predrag days: 30 → 20 → 10 kg drop set' },
-          tip: { aamna: 'Bar only today. Learn the pivot first' } },
-        { code: 'C2', ex: 'farmer-carry', sets: 2, reps: '30 m / side', rpe: 'moderate', unit: 'kg',
-          variants: ['Suitcase (one hand)', 'Farmer (two hands)'],
-          start: { ali: '20' },
-          tip: { ali: 'One dumbbell. Stay level: don’t lean', aamna: 'Use the weight you carried yesterday, in one hand. Stay level' } },
-        { code: 'C3', ex: 'side-plank', sets: 2, reps: '20–30 s / side', rpe: 'moderate', unit: 'hold', noWeight: true }
+        { code: 'C1', ex: 'pallof-press', sets: 2, reps: '10 / side', rpe: '6', unit: 'kg',
+          tip: { aamna: 'Light enough to hold the handle perfectly still for 2 s' } },
+        { code: 'C2', ex: 'farmer-carry', sets: 2, reps: '30–40 m', rpe: 'moderate', unit: 'kg per hand',
+          tip: { aamna: 'Saturday’s carry weight, or one step up' } }
       ]
     }
   ],
   finisher: {
-    type: 'intervals', name: 'Predrag Rounds', ex: 'shadow-boxing', rpe: '7',
-    sets: 2, rounds: 3, setRest: 60,
+    type: 'intervals', name: 'Row Strong', ex: 'rower', rpe: '7',
+    sets: 1, rounds: 6, setRest: 0,
     segments: [
-      { label: 'Jab–cross', secs: 20 },
-      { label: 'Uppercuts', secs: 20 },
-      { label: 'Hooks', secs: 20 },
-      { label: 'Rest', secs: 10, rest: true }
+      { label: 'Row strong', secs: 30 },
+      { label: 'Easy', secs: 30, rest: true }
     ],
-    how: 'Side by side, shadow-boxing the same punches at the same time. The app beeps at every switch: two high beeps mean punch, one low beep means rest.',
-    pace: 'Fast hands, light feet, breathe out on every punch.',
-    alt: 'No space? Same timing on the bike: hard, steady, hard, easy.'
+    how: '6 rounds of 30 s strong rowing and 30 s easy paddling. The app beeps at every switch.',
+    pace: 'Strong, not all-out. Legs first, then body, then arms.',
+    alt: 'No rower free? Same timing on the bike.'
   },
   cooldown: {
     minutes: 5,
     items: [
-      { ex: 'childs-pose', dose: '45 s, reach to each side' },
       { ex: 'hip-flexor-stretch', dose: '45 s / side' },
+      { ex: 'childs-pose', dose: '45 s, reach to each side' },
       { ex: 'chest-stretch', dose: '30 s / side' }
     ],
-    extra: 'Finish with 5 slow breaths lying down (4 s in, 6 s out). Tomorrow is a rest day.'
+    extra: 'Finish with 5 slow breaths (4 s in, 6 s out). That’s 3 sessions: your Week 1 target is done.'
   },
-  planB: 'Very sore or short on time (35 min): 5-min bike, Block A × 2 (back extensions with a smaller range), Block B × 2, then 1 set of Predrag Rounds. Skip Block C.',
+  planB: 'Tired, sore or short on time (30 min): 5-min warm-up, Block A × 2, Block B × 2, then 3 rounds of Row Strong.',
   swaps: [
-    ['Back extension', 'Hip abduction machine 3 × 15, or a cable pull-through 3 × 12'],
-    ['Pull-up', 'Lat pulldown 3 × 10'],
-    ['Half-kneeling press', 'Seated DB press, or the shoulder-press machine'],
-    ['Face pull', 'Band pull-apart, or the rear-delt fly machine'],
-    ['Bar left right', 'Pallof press, or a cable woodchop'],
-    ['Suitcase carry', 'Farmer carry'],
-    ['Boxing', 'Bike: 20 s hard, 20 s steady, 20 s hard, 10 s easy']
+    ['Goblet squat', 'Leg press 3 × 12'],
+    ['Seated cable row', 'Chest-supported row machine, or 1-arm DB row'],
+    ['Step-up', 'Reverse lunge, holding a rack for balance'],
+    ['Push-up', 'Machine chest press 3 × 10'],
+    ['Pallof press', 'Dead bug 2 × 6 / side'],
+    ['Farmer carry', 'Hold the dumbbells for 30 s, standing tall'],
+    ['Rower', 'Bike, same timing']
   ],
   after: [
-    'Two days in a row. Tomorrow (Mon) is a rest day: walk 30–45 min together.',
-    'Yesterday’s soreness peaks today or tomorrow. It fades faster if you keep moving.',
-    'Protein at every meal, and get to bed on time.',
-    'Send the coach your reports from Session 1 and today, so Session 3 has exact weights for you both.'
+    'Send three things to the coach (or Ali): your goblet squat weight, your push-up height, and how hard it felt from 1 to 10.',
+    'A walk tomorrow helps recovery.',
+    'Protein at every meal and a good night’s sleep.'
   ],
-  next: 'Session 3 (Tue or Wed): T-C, Athletic & Engine, together. Ali, if you want a 4th session this week, add a solo upper day on Thu or Fri. Message the coach before you go.'
+  next: 'Next: together again on Thu or Fri (T-C, Athletic & Engine, with partner med-ball throws and a partner workout).'
 };
 
 /* Earlier sessions, kept so an unsent report can still be built from logs saved on the phone. */
 window.PAST_SESSIONS = [
+  {
+    id: '2026-11-08_W1S2', week: 1, num: 2, type: 'Together', dateLabel: 'Sun 8 Nov 2026', title: 'Round Two',
+    warmup: { items: [1, 2, 3, 4, 5, 6] },
+    cooldown: { items: [1, 2, 3] },
+    blocks: [
+      { items: [
+        { code: 'A1', ex: 'back-extension', sets: 3, reps: '12', unit: 'kg plate at chest (blank = bodyweight)' },
+        { code: 'A2', ex: 'pull-up', sets: 3, reps: '5–6', unit: 'kg assistance (blank = strict)', variants: ['Assisted machine', 'Band-assisted', 'Strict', 'Slow negatives (3–5 s down)'] }
+      ] },
+      { items: [
+        { code: 'B1', ex: 'half-kneeling-press', sets: 3, reps: '8 / side', unit: 'kg' },
+        { code: 'B2', ex: 'face-pull', sets: 3, reps: '15', unit: 'kg' }
+      ] },
+      { items: [
+        { code: 'C1', ex: 'landmine-rotation', sets: 2, reps: '8 / side', unit: 'kg added (blank = bar only)' },
+        { code: 'C2', ex: 'farmer-carry', sets: 2, reps: '30 m / side', unit: 'kg', variants: ['Suitcase (one hand)', 'Farmer (two hands)'] },
+        { code: 'C3', ex: 'side-plank', sets: 2, reps: '20–30 s / side', unit: 'hold', noWeight: true }
+      ] }
+    ],
+    finisher: { type: 'intervals', name: 'Predrag Rounds', sets: 2, rounds: 3 }
+  },
   {
     id: '2026-11-07_W1S1', week: 1, num: 1, type: 'Together', dateLabel: 'Sat 7 Nov 2026', title: 'We’re Back',
     warmup: { items: [1, 2, 3, 4, 5, 6, 7] },
@@ -164,10 +172,10 @@ window.PLAN = {
 };
 
 window.PROGRESS = {
-  updated: '2026-11-08',
-  sessions: { ali: 1, aamna: 1, together: 1 },
+  updated: '2026-11-09',
+  sessions: { ali: 2, aamna: 2, together: 2 },
   streakWeeks: { ali: 0, aamna: 0 },
   prs: { ali: 0, aamna: 0 },
-  history: 'Ali’s Predrag notes (Dec 2021 to Dec 2022) are saved. Marks to beat: 5 strict pull-ups, lat pulldown 45 kg × 12.',
-  nextMilestone: 'First full week on target: Ali 3+, Aamna 3 by Sun 15 Nov. After today: 2 done each'
+  history: 'Ali\u2019s Predrag notes (Dec 2021 to Dec 2022) are saved. Marks to beat: 5 strict pull-ups, lat pulldown 45 kg × 12.',
+  nextMilestone: 'Aamna: Tuesday\u2019s solo session completes her Week 1 target (3 of 3). Ali: 2 done, 1–2 to go by Sun 15 Nov'
 };

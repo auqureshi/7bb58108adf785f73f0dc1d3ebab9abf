@@ -5,7 +5,9 @@
   var M = window.Motion || null;
   var RM = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var EX = window.EXERCISES, S = window.SESSION, PLAN = window.PLAN, PR = window.PROGRESS;
-  var ATH = window.ATHLETES, BODY = window.BODY;
+  var ALL_ATH = window.ATHLETES, BODY = window.BODY;
+  var ATH = S.athletes ? ALL_ATH.filter(function (a) { return S.athletes.indexOf(a.id) > -1; }) : ALL_ATH;
+  var athletesOf = function (sess) { return sess.athletes ? ALL_ATH.filter(function (a) { return sess.athletes.indexOf(a.id) > -1; }) : ALL_ATH; };
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -14,8 +16,8 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   };
-  var athName = function (id) { return (ATH.filter(function (a) { return a.id === id; })[0] || {}).name || id; };
-  var other = function (id) { return id === ATH[0].id ? ATH[1].id : ATH[0].id; };
+  var athName = function (id) { return (ALL_ATH.filter(function (a) { return a.id === id; })[0] || {}).name || id; };
+  var other = function (id) { return id === ALL_ATH[0].id ? ALL_ATH[1].id : ALL_ATH[0].id; };
 
   var MUSCLE = {
     quadriceps: 'Quads', gluteal: 'Glutes', hamstring: 'Hamstrings', adductor: 'Inner thighs', calves: 'Calves',
@@ -199,8 +201,8 @@
       '</div></div>';
 
     // Warm-up
-    h += '<div class="sec" id="warmup"><div class="sec-head"><h2>Warm-up</h2><span class="meta">' + S.warmup.minutes + ' min · together</span></div>' +
-      '<p class="lead"><b>First:</b> ' + esc(S.warmup.cardio) + ' <b>Then:</b> one round of the moves below, following each other.</p>' +
+    h += '<div class="sec" id="warmup"><div class="sec-head"><h2>Warm-up</h2><span class="meta">' + S.warmup.minutes + ' min' + (ATH.length > 1 ? ' · together' : '') + '</span></div>' +
+      '<p class="lead"><b>First:</b> ' + esc(S.warmup.cardio) + ' <b>Then:</b> one round of the moves below' + (ATH.length > 1 ? ', following each other' : '') + '.</p>' +
       '<div class="rows">' + S.warmup.items.map(function (it, i) { return checkRow('warm', i, it); }).join('') + '</div></div>';
 
     // Blocks
@@ -257,7 +259,7 @@
   function renderBlock(b) {
     var a0 = ATH[0], a1 = ATH[1];
     var flow = '';
-    if (b.format === 'Swap Stations' && b.items.length === 2) {
+    if (b.format === 'Swap Stations' && b.items.length === 2 && ATH.length === 2) {
       var i0 = b.items[0], i1 = b.items[1];
       var n0 = EX[i0.ex].name, n1 = EX[i1.ex].name;
       flow = '<div class="flow" aria-label="Round flow">' +
@@ -561,7 +563,7 @@
       if (T.stopped) return N + ': stopped in set ' + T.stopped.set + ' of ' + F.sets;
       return N + ': not done';
     }
-    var R = st.relay || { splits: [], starter: ATH[0].id };
+    var R = st.relay || { splits: [], starter: ALL_ATH[0].id };
     if (!R.splits || !R.splits.length) return N + ': not timed';
     var parts = R.splits.map(function (t, i) { return athName(legAthR(R, i)) + ' ' + fmt(t - (i ? R.splits[i - 1] : 0)); });
     return N + ': ' + (R.splits.length >= F.legs ? fmt(R.splits[F.legs - 1]) + ' total' : R.splits.length + '/' + F.legs + ' legs') + ' (' + parts.join(', ') + ')';
@@ -569,7 +571,7 @@
   function reportFor(sess, st) {
     var lines = [];
     lines.push('THE COMEBACK · Week ' + sess.week + ' Session ' + sess.num + ' · ' + sess.type + ' · ' + sess.dateLabel);
-    ATH.forEach(function (a) {
+    athletesOf(sess).forEach(function (a) {
       lines.push(''); lines.push(a.name.toUpperCase());
       itemsOf(sess).forEach(function (it) {
         var l = stL(st, it.code, a.id), e = EX[it.ex] || { name: it.ex };

@@ -76,6 +76,7 @@ A phone-first web app published as a private claude.ai artifact.
 - **More item fields:** `tip: { ali, aamna }` (short coaching text), `noWeight: true` (holds such as planks),
   and `variants: [...]` (a per-person dropdown, e.g. assisted or strict). `past` text prints as written, so include its label ("Predrag days: …", "Last time: …").
   `SESSION.note` shows under the hero, which suits a soreness check or other warning.
+  For a solo session, set `SESSION.athletes: ['aamna']` (or `['ali']`) so only that person's log rows and report appear.
 - **Finisher types:** `type: 'relay'` (`legs`, `leg`: a stopwatch that alternates partners), or `type: 'intervals'` (`sets`, `rounds`, `setRest`,
   `segments: [{ label, secs, rest? }]`: a beeping round timer, used for boxing and bike intervals).
 - **New session:** rewrite `SESSION` in `app/js/session.js`. Bump `S.id`, because logs are saved in the browser per id.
@@ -89,6 +90,12 @@ A phone-first web app published as a private claude.ai artifact.
 - **Republish:** call `get_artifact` for the live version first. Then call `publish_files` with the slug and `base_version`, in patch mode, listing only the changed files
   (usually just `js/session.js`, plus any new `js/exercises.js` and `img/*`).
 - **Check** that the JS parses (`node -e "new Function(require('fs').readFileSync('app/js/session.js','utf8'))"`) before publishing.
+
+## Shareable PDF
+
+`NODE_PATH=$(npm root -g) node tools/session-pdf.js shared/<YYYY-MM-DD>_<Name>_<Title>.pdf` builds an A4 PDF of the **current** `SESSION`.
+It includes start/finish photos, cues, tips, tick boxes, the muscle map, swaps and Plan B, using the app's data, fonts in `tools/fonts` (OFL) and Chromium.
+Render the pages once with `pdftoppm` to check the layout, then send the file to the user. Good for whoever trains without the app, e.g. Aamna solo.
 
 ## Progression and safety (summary; full rules in `program/overview.md`)
 

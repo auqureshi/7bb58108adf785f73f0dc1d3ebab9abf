@@ -6,14 +6,14 @@ _Updated by the coach after every session. Compete with your past self, never wi
 
 | | Ali | Aamna |
 |---|---|---|
-| Sessions completed | 1 | 1 |
-| …of which together | 1 | 1 |
+| Sessions completed | 2 | 2 |
+| …of which together | 2 | 2 |
 | …of which solo | 0 | 0 |
 | Weeks hitting the target (Ali 3+, Aamna 2+) | 0 | 0 |
 | Current week streak | — | — |
 | PRs this block | 0 | 0 |
 
-**Now:** Phase 1 (Re-Entry) · Week 1 · Session 2 on Sun 8 Nov 2026. Session 1 done Sat 7 Nov; its numbers are still to come.
+**Now:** Phase 1 (Re-Entry) · Week 1 · S1 (Sat) and S2 (Sun) done; numbers still to come. Next: Aamna solo, Tue 10 Nov.
 
 ---
 
@@ -21,7 +21,7 @@ _Updated by the coach after every session. Compete with your past self, never wi
 
 | Wk | Dates | Phase | Target (Ali / Aamna) | Ali | Aamna | Together | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | 7–15 Nov | Re-Entry | 3–4 / 3 | 1 | 1 | 1 | Kickoff week. S1 done Sat; S2 Sun |
+| 1 | 7–15 Nov | Re-Entry | 3–4 / 3 | 2 | 2 | 2 | S1 Sat, S2 Sun done. Aamna solo Tue |
 | 2 | 16–22 Nov | Re-Entry | 3 / 2–3 | | | | Benchmark baseline |
 | 3 | 23–29 Nov | Re-Entry | 3 / 2–3 | | | | Barbells return |
 | 4 | 30 Nov–6 Dec | Build | 3–4 / 2–3 | | | | |
@@ -42,7 +42,8 @@ _Updated by the coach after every session. Compete with your past self, never wi
 | # | Date | Session | Who | Felt (1–10) Ali / Aamna | Highlights | File |
 |---|---|---|---|---|---|---|
 | 1 | 2026-11-07 | W1 S1 · T-A "We're Back" | Both | — | ✅ Done ("this was great"). Numbers still to come | [link](../sessions/2026-11-07_W1D1_together.md) |
-| 2 | 2026-11-08 | W1 S2 · T-B "Round Two" (back-to-back day version) | Both | — | _planned_ | [link](../sessions/2026-11-08_W1D2_together.md) |
+| 2 | 2026-11-08 | W1 S2 · T-B "Round Two" (back-to-back day version) | Both | — | ✅ Done. Back extension replaced hip thrust. Numbers still to come | [link](../sessions/2026-11-08_W1D2_together.md) |
+| 3 | 2026-11-10 | W1 S3 · Solo "Solo Strong" (T-C, solo version) | Aamna | — | _planned_. PDF shared | [link](../sessions/2026-11-10_W1D3_solo-aamna.md) |
 
 ---
 
