@@ -331,11 +331,11 @@
   function legAth(i) { return legAthR(state.relay, i); }
   function renderRelay() {
     var F = S.finisher;
-    return '<div class="sec" id="finisher"><div class="sec-head"><h2>Finisher</h2><span class="meta">~8 min · RPE ' + esc(F.rpe) + '</span></div>' +
+    return '<div class="sec" id="finisher"><div class="sec-head"><h2>Finisher</h2><span class="meta">~' + (F.minutes || 8) + ' min · RPE ' + esc(F.rpe) + '</span></div>' +
       '<div class="relay" data-rise>' +
       '<div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">' +
       '<div><p class="eyebrow">' + esc(F.name) + ' · ' + F.legs + ' × ' + esc(F.leg) + '</p><p class="small" style="margin-top:4px">' + esc(F.how) + '</p></div>' +
-      '<button class="thumb" type="button" data-open="' + F.ex + '" style="width:72px;aspect-ratio:1;border-radius:10px;overflow:hidden;border:0;padding:0" aria-label="How to row"><img src="img/' + F.ex + '-0.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></button>' +
+      '<button class="thumb" type="button" data-open="' + F.ex + '" style="width:72px;aspect-ratio:1;border-radius:10px;overflow:hidden;border:0;padding:0" aria-label="How to do it"><img src="img/' + F.ex + '-0.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></button>' +
       '</div>' +
       '<div class="clock num" id="clock" aria-live="off">0:00.0</div>' +
       '<p class="turn" id="turn" aria-live="polite"></p>' +
@@ -355,7 +355,7 @@
     if (!R.t0) {
       var st = R.starter;
       turn.className = 'turn ' + st;
-      turn.innerHTML = '<b>' + esc(athName(st)) + '</b> rows first. Then tag ' + esc(athName(other(st))) + '. ' +
+      turn.innerHTML = '<b>' + esc(athName(st)) + '</b> ' + esc(F.firstVerb || 'rows first') + '. Then tag ' + esc(athName(other(st))) + '. ' +
         '<span class="seg" role="group" aria-label="Who starts" style="margin-left:6px">' + ATH.map(function (a) {
           return '<button type="button" data-starter="' + a.id + '" aria-pressed="' + (st === a.id) + '">' + esc(a.name) + '</button>';
         }).join('') + '</span>';
@@ -365,7 +365,7 @@
     } else {
       var who = legAth(n);
       turn.className = 'turn ' + who;
-      turn.innerHTML = 'Rowing now: <b>' + esc(athName(who)) + '</b> · leg ' + (n + 1) + ' of ' + F.legs + ' · ' + esc(F.leg);
+      turn.innerHTML = esc(F.nowLabel || 'Rowing now') + ': <b>' + esc(athName(who)) + '</b> · leg ' + (n + 1) + ' of ' + F.legs + ' · ' + esc(F.leg);
     }
     var legs = '';
     for (var i = 0; i < F.legs; i++) {
