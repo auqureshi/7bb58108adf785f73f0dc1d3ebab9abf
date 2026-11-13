@@ -561,3 +561,75 @@ Object.assign(window.EXERCISES, {
   };
   Object.keys(C).forEach(function (k) { if (E[k]) E[k].predrag = C[k]; });
 })(window.EXERCISES);
+
+/* ---------- Machines (added 13 Nov: Ali and Aamna prefer machine-based sessions) ---------- */
+Object.assign(window.EXERCISES, {
+  'leg-press': {
+    name: 'Leg Press', pattern: 'Squat (machine)', equipment: 'Leg press machine', kind: 'strength',
+    primary: ['quadriceps', 'gluteal'], secondary: ['hamstring', 'adductor', 'calves'],
+    goals: ['strong'],
+    what: 'Seated in the machine, you lower the platform toward your chest by bending your knees, then press it back up.',
+    why: 'It loads your legs heavily without any balance or back strain. That makes it easy to push safely and easy to progress week to week.',
+    cues: ['Feet hip-width in the middle of the platform', 'Lower until your knees reach about 90°, before your hips curl up off the pad', 'Push through your whole foot', 'Stop just short of locking your knees'],
+    mistakes: ['Lowering so far that your lower back rounds off the pad', 'Locking your knees hard at the top', 'Knees caving in'],
+    easier: 'Lighter, smaller range.', harder: 'Slow 3-second lowering, or single leg.',
+    life: 'Strong legs for stairs, hills and getting up off the floor.',
+    predrag: 'Predrag days: 55 kg × 10, then a drop set to 45 kg × 15.'
+  },
+  'chest-press-machine': {
+    name: 'Chest Press Machine', pattern: 'Horizontal push (machine)', equipment: 'Chest press machine', kind: 'strength',
+    primary: ['chest'], secondary: ['front-deltoids', 'triceps'],
+    goals: ['strong'],
+    what: 'Seated with your back against the pad, you press the handles forward until your arms are straight, then bring them back slowly.',
+    why: 'It builds your chest, shoulders and triceps with a fixed path, so you can focus on pushing hard without balancing a bar.',
+    cues: ['Seat height so the handles line up with mid-chest', 'Shoulder blades back against the pad', 'Press out without locking your elbows', '2 seconds back'],
+    mistakes: ['Shoulders rolling forward off the pad', 'Letting the weight crash back'],
+    easier: 'Lighter.', harder: 'Pause 1 s with the weight just off the stack.',
+    life: 'Pushing power.'
+  },
+  'shoulder-press-machine': {
+    name: 'Shoulder Press Machine', pattern: 'Vertical push (machine)', equipment: 'Shoulder press machine', kind: 'strength',
+    primary: ['front-deltoids'], secondary: ['triceps', 'trapezius'],
+    goals: ['strong'],
+    what: 'Seated, you press the handles from shoulder height to overhead.',
+    why: 'It builds strong, rounded shoulders with the back supported, which is kind to the lower back.',
+    cues: ['Handles start at about shoulder height', 'Back flat against the pad', 'Press up without shrugging', 'Lower slowly to shoulder height'],
+    mistakes: ['Arching your back off the pad', 'Shrugging your shoulders to your ears'],
+    easier: 'Lighter.', harder: 'Slower lowering.',
+    life: 'Lifting things overhead.',
+    predrag: 'Predrag’s version: half way up, then full up.'
+  },
+  'leg-curl': {
+    name: 'Leg Curl', pattern: 'Hamstrings (machine)', equipment: 'Seated or lying leg curl machine', kind: 'strength',
+    primary: ['hamstring'], secondary: ['calves'],
+    goals: ['strong', 'functional'],
+    what: 'With the pad just above your heels, you bend your knees to pull the pad down and back, then return slowly.',
+    why: 'Strong hamstrings protect your knees and balance all the quad work from squats and the leg press.',
+    cues: ['Knees lined up with the machine’s pivot', 'Pad just above your heels', 'Curl fully and squeeze for 1 s', 'Lower over 2–3 seconds'],
+    mistakes: ['Lifting your hips', 'Letting the weight drop back'],
+    easier: 'Lighter.', harder: 'Single leg, or a slower lowering.',
+    life: 'Healthy knees and faster running.'
+  },
+  'cable-curl': {
+    name: 'Cable Curl', pattern: 'Arms', equipment: 'Cable + straight or EZ bar', kind: 'strength',
+    primary: ['biceps'], secondary: ['forearm'],
+    goals: ['strong'],
+    what: 'Standing at a low cable, you curl the bar up to your chest with your elbows at your sides.',
+    why: 'The cable keeps tension on your biceps through the whole rep, which makes it great for a pump.',
+    cues: ['Elbows pinned to your sides', 'Curl up, squeeze at the top', 'Lower slowly all the way down'],
+    mistakes: ['Swinging your body', 'Elbows drifting forward'],
+    easier: 'Lighter.', harder: 'Pause at the top, or superset with hammer curls.',
+    life: 'Carrying and pulling strength.'
+  },
+  'bike': {
+    name: 'Exercise Bike', pattern: 'Engine', equipment: 'Upright or recumbent bike', kind: 'engine',
+    primary: ['quadriceps'], secondary: ['gluteal', 'hamstring', 'calves'],
+    goals: ['lean'],
+    what: 'Steady or interval cycling on a stationary bike.',
+    why: 'It is the easiest cardio on your joints and great for burning extra calories at the end of a session.',
+    cues: ['Seat height: a slight bend in your knee at the bottom', 'Push and pull through the whole pedal circle', 'Hard intervals: raise the resistance, not just your speed'],
+    mistakes: ['Seat too low, so your knees stay very bent', 'Bouncing in the saddle'],
+    easier: 'Lower resistance.', harder: 'More resistance or longer hard intervals.',
+    life: 'A stronger heart and lungs.'
+  }
+});

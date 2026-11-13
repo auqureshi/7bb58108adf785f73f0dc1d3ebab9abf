@@ -6,101 +6,129 @@ window.ATHLETES = [
 ];
 
 window.SESSION = {
-  id: '2026-11-13_W1S4',
+  id: '2026-11-13_W1S4m',
   week: 1, num: 4,
   date: '2026-11-13', dateLabel: 'Fri 13 Nov 2026',
-  title: 'Tag Team',
-  type: 'Together', template: 'T-C · Athletic & Engine', phase: 'Phase 1 · Re-Entry',
-  minutes: 55, rpe: '6',
-  brief: 'The athletic day: throw fast, lunge with weight, learn the kettlebell swing, and finish with a tag-team relay. Today you also coach each other. On the swings, the partner who is resting watches the hinge. Ali, this is your 3rd session this week, which hits your Week 1 target.',
-  jobs: ['Throw fast, not hard', 'Add dumbbells to Saturday’s lunges', 'Learn the swing, coach each other', 'Set a relay time to beat'],
-  note: 'Still sore from earlier in the week, or short on sleep? Use Plan B. The swing is a hinge: if your lower back feels it more than your glutes, stop and swap to the kettlebell deadlift.',
+  title: 'Machine Day',
+  type: 'Together', template: 'Machines · full body', phase: 'Phase 1 · Re-Entry',
+  minutes: 50, rpe: '6',
+  brief: 'Same goals, your way: a full-body session on machines. Machines are quick to set up and easy to adjust, and you can push them safely. On every machine, pick a weight where 12 reps leave 3–4 in the tank.',
+  jobs: ['Legs: leg press + leg curl', 'Pull: pulldown + row', 'Push: chest + shoulder press', 'Arm pump to finish'],
+  note: 'Machine weights differ between gyms, so the first set on each machine is a feeler set. Write down the pin or the plates: that’s your number to beat next time.',
   warmup: {
-    minutes: 10,
-    cardio: '5 min easy row or bike, side by side. Chatting pace.',
+    minutes: 7,
+    cardio: '5 min easy bike, side by side.',
     items: [
-      { ex: 'worlds-greatest-stretch', dose: '3 / side' },
-      { ex: 'glute-bridge', dose: '× 10, 2 s squeeze' },
-      { ex: 'inchworm', dose: '× 4' },
       { ex: 'band-pull-apart', dose: '× 15' },
-      { ex: 'bodyweight-squat', dose: '× 8' },
-      { ex: 'dead-bug', dose: '5 / side' }
+      { ex: 'bodyweight-squat', dose: '× 10' },
+      { ex: 'glute-bridge', dose: '× 10' },
+      { ex: 'worlds-greatest-stretch', dose: '2 / side' }
     ]
   },
   blocks: [
     {
-      id: 'A', format: 'Partner power', rounds: 3, minutes: 8, rest: 60,
-      how: 'Stand about 3 m apart, facing each other. Pass the ball back and forth: 8 throws each per set. Every throw should be fast and crisp. Stop the set if throws slow down.',
-      note: 'Power goes first, while you’re fresh.',
+      id: 'A', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
+      how: 'One of you on the leg press, the other on the lat pulldown, then swap. Rest about 60 s after each round.',
       items: [
-        { code: 'A1', ex: 'med-ball-chest-pass', sets: 3, reps: '8 throws each', rpe: 'fast', unit: 'kg ball',
-          start: { ali: '6' },
-          tip: { ali: 'Step into each throw and drive from the legs', aamna: 'Start with a 3–4 kg ball. Speed matters more than weight' } }
+        { code: 'A1', ex: 'leg-press', sets: 3, reps: '12', rpe: '6', unit: 'kg (plates or pin)',
+          start: { ali: '50' }, past: { ali: 'Predrag days: 55 kg × 10, then 45 kg × 15' },
+          tip: { aamna: 'Feeler set light: a weight you could press about 20 times. Then adjust' } },
+        { code: 'A2', ex: 'lat-pulldown', sets: 3, reps: '12', rpe: '6', unit: 'kg',
+          start: { ali: '35' }, past: { ali: 'Predrag days: 45 kg × 12 × 4' },
+          tip: { aamna: 'A weight you could pull about 15 times. Hold the bar at your chest for 1 s' } }
       ]
     },
     {
-      id: 'B', format: 'Swap Stations', rounds: 3, minutes: 12, rest: 60,
-      how: 'One of you does B1 while the other does B2, then swap. Once you’ve both done both, that’s 1 round. Rest about 60 s.',
+      id: 'B', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
+      how: 'Chest press and seated row, then swap. Rest about 60 s.',
       items: [
-        { code: 'B1', ex: 'reverse-lunge', sets: 3, reps: '8 / side', rpe: '6', unit: 'kg (each DB, blank = bodyweight)',
-          start: { ali: '8' },
-          past: { ali: 'Saturday: bodyweight × 6/side, easy · Predrag days: lunges with 8–10 kg' },
-          tip: { aamna: 'Round 1 bodyweight (Saturday’s version). Add light dumbbells only if it feels easy' } },
-        { code: 'B2', ex: 'push-up', sets: 3, reps: '8–12', rpe: '6', unit: 'pick your version', noWeight: true,
-          variants: ['Floor', 'Feet on a bench (harder)', 'Hands on a bench', 'Hands on a Smith bar', 'Knees'],
-          tip: { ali: 'Floor push-ups. If 12 reps leave more than 4 in the tank, put your feet on a bench', aamna: 'Tuesday’s height, or one notch lower if every set felt easy' } }
+        { code: 'B1', ex: 'chest-press-machine', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
+          past: { ali: 'Predrag days: bench 40 kg' },
+          tip: { ali: 'Feeler set first, then adjust', aamna: 'Feeler set light, then adjust' } },
+        { code: 'B2', ex: 'cable-row', sets: 3, reps: '12', rpe: '6', unit: 'kg',
+          start: { ali: '35' }, past: { ali: 'Predrag days: 45 kg × 12 × 3' },
+          tip: { aamna: 'A weight you could pull about 15 times. Chest tall, no rocking' } }
       ]
     },
     {
-      id: 'C', format: 'Swap Stations', rounds: 3, minutes: 12, rest: 60,
-      how: 'One of you swings while the other does the landmine, then swap.',
-      note: 'Swings: the first set is 8 kettlebell deadlifts to learn the hinge, then swing. The partner who is resting watches: hips back (not a squat), arms loose, bell floats to chest height.',
+      id: 'C', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
+      how: 'Shoulder press and leg curl, then swap. Rest about 60 s.',
       items: [
-        { code: 'C1', ex: 'kb-swing', sets: 3, reps: '12', rpe: '6', unit: 'kg',
-          start: { ali: '16' },
-          past: { ali: 'Predrag days: 16 kg floor hinge' },
-          tip: { ali: 'Aamna checks your hinge. Snap your hips, don’t lift with your arms', aamna: 'Start light (8–12 kg). Ali checks your hinge. Hips back, then snap forward' } },
-        { code: 'C2', ex: 'landmine-rotation', sets: 3, reps: '8 / side', rpe: '6', unit: 'kg added (blank = bar only)',
-          past: { ali: 'Predrag days: 30 → 20 → 10 kg drop set' },
-          tip: { ali: 'Sunday’s weight, or +2.5–5 kg if it was easy', aamna: 'Bar only or Sunday’s weight. Pivot your back foot' } }
+        { code: 'C1', ex: 'shoulder-press-machine', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
+          tip: { ali: 'Feeler set first. Back flat on the pad', aamna: 'Light feeler set, back flat on the pad' } },
+        { code: 'C2', ex: 'leg-curl', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
+          tip: { ali: 'Squeeze 1 s at the bottom, lower slowly', aamna: 'Squeeze 1 s at the bottom, lower slowly' } }
+      ]
+    },
+    {
+      id: 'D', format: 'Swap Stations', rounds: 2, minutes: 6, rest: 45,
+      how: 'Arm pump. One on curls, one on pushdowns, then swap. If there’s only one cable station, take turns.',
+      items: [
+        { code: 'D1', ex: 'cable-curl', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+          tip: { ali: 'Elbows pinned, squeeze at the top', aamna: 'Elbows pinned, squeeze at the top' } },
+        { code: 'D2', ex: 'triceps-pushdown', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+          past: { ali: 'Predrag days: pushdown 11 kg' } }
       ]
     }
   ],
   finisher: {
-    type: 'relay', name: 'Tag Team Relay', ex: 'kb-swing', legs: 10, leg: '1 round', rpe: '7', minutes: 10,
-    firstVerb: 'goes first', nowLabel: 'Working now',
-    how: 'One round = 8 KB swings + 6 push-ups (today’s version) + 20 m suitcase carry with your bell (switch hands halfway). Do a round, then tag your partner. 5 rounds each.',
-    pace: 'Steady and clean. The score is your total time, so we can beat it in a few weeks.',
-    alt: 'Swings feel unsure? Do 8 kettlebell deadlifts instead.'
+    type: 'intervals', name: 'Bike Finish', ex: 'bike', rpe: '7',
+    sets: 1, rounds: 6, setRest: 0,
+    segments: [
+      { label: 'Push', secs: 30 },
+      { label: 'Easy', secs: 30, rest: true }
+    ],
+    how: 'Side by side on two bikes: 30 s hard pedalling, 30 s easy, 6 times. The app beeps at every switch.',
+    pace: 'Raise the resistance for the hard parts. Hard but steady, not a sprint.',
+    alt: 'Optional if you’re short on time.'
   },
   cooldown: {
-    minutes: 5,
+    minutes: 4,
     items: [
-      { ex: 'hip-flexor-stretch', dose: '45 s / side' },
-      { ex: 'childs-pose', dose: '45 s, reach to each side' },
-      { ex: 'chest-stretch', dose: '30 s / side' }
+      { ex: 'chest-stretch', dose: '30 s / side' },
+      { ex: 'childs-pose', dose: '45 s' },
+      { ex: 'hip-flexor-stretch', dose: '30 s / side' }
     ],
-    extra: 'Finish with 5 slow breaths. That wraps up Week 1 of the comeback.'
+    extra: 'That wraps up Week 1.'
   },
-  planB: 'Short on time or still sore (35 min): 5-min warm-up, Block A × 2, Block B × 2, then Tag Team Relay with 3 rounds each.',
+  planB: 'Short on time (35 min): warm-up, Blocks A and B (3 rounds each), then Block D. Skip Block C and the bike.',
   swaps: [
-    ['Med-ball chest pass', 'Chest pass against a wall, or fast push-ups with hands on a bench'],
-    ['Reverse lunge', 'DB step-up, or split squat holding a rack'],
-    ['Push-up', 'DB bench press 3 × 10'],
-    ['KB swing', 'Kettlebell deadlift 3 × 10'],
-    ['Landmine rotation', 'Pallof press 3 × 10 / side'],
-    ['Suitcase carry (relay)', 'Farmer carry with two bells']
+    ['Leg press', 'Hack squat or Smith machine squat 3 × 12'],
+    ['Lat pulldown', 'Assisted pull-up machine'],
+    ['Chest press machine', 'Pec deck (fly machine) or DB bench press'],
+    ['Seated cable row', 'Chest-supported row machine'],
+    ['Shoulder press machine', 'Seated DB shoulder press'],
+    ['Leg curl', 'Lying leg curl'],
+    ['Cable curl', 'DB curl'],
+    ['Triceps pushdown', 'Triceps dip machine']
   ],
   after: [
-    'Ali: 3 sessions this week, so your Week 1 target is hit. Aamna: 3 or 4, depending on Tuesday.',
-    'Weekend: one long walk together, then rest. Week 2 starts Monday.',
-    'Send the coach your reports for Sessions 1–4 (cards at the top of this page), so Week 2 starts with exact weights.'
+    'Write down the pin or plates for every machine. That’s your number to beat next time.',
+    'Ali: 3 sessions this week, so the Week 1 target is hit.',
+    'Send the coach your report (the "Build my report" button at the bottom).'
   ],
-  next: 'Week 2 starts Mon 16 Nov: effort steps up to RPE 7, and the benchmark tests (push-ups, dead hang, plank, 500 m row, broad jump) give you both a baseline.'
+  next: 'Week 2 (from Mon 16 Nov) will be built around machines plus a few dumbbell moves, at RPE 7.'
 };
 
 /* Earlier sessions, kept so an unsent report can still be built from logs saved on the phone. */
 window.PAST_SESSIONS = [
+  {
+    id: '2026-11-13_W1S4', week: 1, num: 4, type: 'Together', dateLabel: 'Fri 13 Nov 2026', title: 'Tag Team (switched to machines)',
+    warmup: { items: [1, 2, 3, 4, 5, 6] },
+    cooldown: { items: [1, 2, 3] },
+    blocks: [
+      { items: [{ code: 'A1', ex: 'med-ball-chest-pass', sets: 3, reps: '8 throws each', unit: 'kg ball' }] },
+      { items: [
+        { code: 'B1', ex: 'reverse-lunge', sets: 3, reps: '8 / side', unit: 'kg (each DB, blank = bodyweight)' },
+        { code: 'B2', ex: 'push-up', sets: 3, reps: '8–12', unit: 'pick your version', noWeight: true, variants: ['Floor', 'Feet on a bench (harder)', 'Hands on a bench', 'Hands on a Smith bar', 'Knees'] }
+      ] },
+      { items: [
+        { code: 'C1', ex: 'kb-swing', sets: 3, reps: '12', unit: 'kg' },
+        { code: 'C2', ex: 'landmine-rotation', sets: 3, reps: '8 / side', unit: 'kg added (blank = bar only)' }
+      ] }
+    ],
+    finisher: { type: 'relay', name: 'Tag Team Relay', legs: 10, leg: '1 round' }
+  },
   {
     id: '2026-11-10_W1S3_aamna', week: 1, num: 3, type: 'Solo · Aamna', athletes: ['aamna'], dateLabel: 'Tue 10 Nov 2026', title: 'Solo Strong',
     warmup: { items: [1, 2, 3, 4, 5] },

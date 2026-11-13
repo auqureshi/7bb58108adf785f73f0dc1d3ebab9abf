@@ -36,7 +36,8 @@ Units: **kg**.
    and `history/summary.md` (Ali's past training with trainer Predrag: last-known numbers, favourite moves, cues).
 2. **Work out:** who's going (together, Ali alone, or Aamna alone), the date, time available, sleep, soreness, energy, any pain, and how busy the gym is.
    If something important is missing, ask briefly. Otherwise assume about 60 minutes and normal energy.
-3. **Choose the session type** using the rotation and the 48-hour rule (see overview). Don't load the same heavy pattern on consecutive days.
+3. **Choose the session type** using the rotation and the 48-hour rule (see overview). **They prefer machines**: build mainly on machines and cables
+   (see the preference update in `program/overview.md`). Skip med-ball, KB-swing and relay formats unless they ask. Don't load the same heavy pattern on consecutive days.
 4. **Set loads per person** from the last logged numbers using the progression rules. Write exact targets when data exists
    (e.g. "Ali: 24 kg × 10 · Aamna: 14 kg × 10"). With no data, give a calibration instruction.
 5. **Write the file** `sessions/YYYY-MM-DD_W<week>D<session#>_<together|solo-ali|solo-aamna>.md` from `templates/session-template.md`.

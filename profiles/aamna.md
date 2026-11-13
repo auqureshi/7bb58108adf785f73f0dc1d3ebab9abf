@@ -34,5 +34,6 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 - None reported yet.
 
 ## Preferences
+- **13 Nov 2026:** the together session was switched from the athletic T-C style to machines at Ali's request. Ask Aamna whether machines suit her too.
 - **Love:**
 - **Hate:**

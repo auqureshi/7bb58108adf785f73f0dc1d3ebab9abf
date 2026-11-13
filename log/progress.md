@@ -44,7 +44,7 @@ _Updated by the coach after every session. Compete with your past self, never wi
 | 1 | 2026-11-07 | W1 S1 · T-A "We're Back" | Both | — | ✅ Done ("this was great"). Numbers still to come | [link](../sessions/2026-11-07_W1D1_together.md) |
 | 2 | 2026-11-08 | W1 S2 · T-B "Round Two" (back-to-back day version) | Both | — | ✅ Done. Back extension replaced hip thrust. Numbers still to come | [link](../sessions/2026-11-08_W1D2_together.md) |
 | 3 | 2026-11-10 | W1 S3 · Solo "Solo Strong" (T-C, solo version) | Aamna | — | _not confirmed yet_. PDF shared | [link](../sessions/2026-11-10_W1D3_solo-aamna.md) |
-| 4 | 2026-11-13 | W1 S4 · T-C "Tag Team" | Both | — | _planned_ | [link](../sessions/2026-11-13_W1D4_together.md) |
+| 4 | 2026-11-13 | W1 S4 · "Machine Day" (replaced T-C "Tag Team" at the gym) | Both | — | _planned_ | [link](../sessions/2026-11-13_W1D4_together.md) |
 
 ---
 

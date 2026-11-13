@@ -41,6 +41,12 @@ Holidays or travel? Follow the **missed-time rules** below. Losing a week is fin
 
 ## Weekly structure
 
+> **Preference update (13 Nov 2026):** Ali asked for **machines**, and the athletic T-C session (med-ball, KB swings, relay) was dropped mid-gym.
+> From Week 2, build sessions mainly on **machines and cables**: leg press, leg curl, leg extension, lat pulldown, rows, chest and shoulder press machines, cable arms.
+> Add a few dumbbell moves (goblet squat, RDL, DB press) for strength carryover. Keep "functional" work small and liked:
+> carries, "bar left right", boxing rounds and bike intervals. Use med-ball throws, KB swings and partner relays only if they ask.
+> T-C is replaced by **T-M (Machine Day, full body)**. `sessions/2026-11-13_W1D4_together.md` is the reference layout.
+
 **Targets:** Aamna: 2–3 sessions/week. Ali: 3–4 sessions/week. **Minimum effective dose: 2 per week each.**
 On non-gym days, walk. Aim for 8–10k steps; an evening walk together counts.
 

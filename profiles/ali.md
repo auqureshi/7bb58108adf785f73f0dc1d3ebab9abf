@@ -37,7 +37,8 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 - None reported yet.
 
 ## Preferences
-- **Love:** "bar left right" (landmine rotation), boxing rounds, supersets, circuits.
+- **Love:** **machines** (leg press, pulldown, rows, chest and shoulder press machines, cables), arm pump supersets, "bar left right" (landmine rotation), boxing rounds.
+- **Dislike:** the athletic T-C style (med-ball throws, KB swings, partner relay). Dropped mid-gym on 13 Nov 2026 and swapped for machines.
 - **Hate:**
 
 ## Gym and equipment
