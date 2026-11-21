@@ -6,112 +6,139 @@ window.ATHLETES = [
 ];
 
 window.SESSION = {
-  id: '2026-11-13_W1S4m',
-  week: 1, num: 4,
-  date: '2026-11-13', dateLabel: 'Fri 13 Nov 2026',
-  title: 'Machine Day',
-  type: 'Together', template: 'Machines · full body', phase: 'Phase 1 · Re-Entry',
-  minutes: 50, rpe: '6',
-  brief: 'Same goals, your way: a full-body session on machines. Machines are quick to set up and easy to adjust, and you can push them safely. On every machine, pick a weight where 12 reps leave 3–4 in the tank.',
-  jobs: ['Legs: leg press + leg curl', 'Pull: pulldown + row', 'Push: chest + shoulder press', 'Arm pump to finish'],
-  note: 'Machine weights differ between gyms, so the first set on each machine is a feeler set. Write down the pin or the plates: that’s your number to beat next time.',
+  id: '2026-11-21_W2S1',
+  week: 2, num: 1,
+  date: '2026-11-21', dateLabel: 'Sat 21 Nov 2026',
+  title: 'Shoulders & Back',
+  type: 'Together', template: 'Upper body · machines & cables', phase: 'Phase 1 · Re-Entry',
+  minutes: 50, rpe: '7',
+  brief: 'No legs today. Shoulders get paired with back, because pressing and pulling in the same session keeps your shoulders healthy and builds the V-shape. Ali, Predrag ran back-and-shoulder days the same way. Then an arm pump, a little "bar left right", and boxing to finish.',
+  jobs: ['Press: shoulder machine + side raises', 'Pull: pulldown + row', 'Rear shoulders and arms pump', 'Box it out'],
+  note: 'Week 2 effort is RPE 7: stop each set with about 3 reps left. If this is your first session since Fri 13 Nov, keep it at RPE 6 today (about 4 left).',
   warmup: {
     minutes: 7,
-    cardio: '5 min easy bike, side by side.',
+    cardio: '5 min easy incline walk or cross-trainer, side by side.',
     items: [
       { ex: 'band-pull-apart', dose: '× 15' },
-      { ex: 'bodyweight-squat', dose: '× 10' },
-      { ex: 'glute-bridge', dose: '× 10' },
-      { ex: 'worlds-greatest-stretch', dose: '2 / side' }
+      { ex: 'cat-cow', dose: '× 6' },
+      { ex: 'inchworm', dose: '× 4' },
+      { ex: 'dead-bug', dose: '5 / side' }
     ]
   },
   blocks: [
     {
-      id: 'A', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
-      how: 'One of you on the leg press, the other on the lat pulldown, then swap. Rest about 60 s after each round.',
+      id: 'A', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 75,
+      how: 'One of you on the shoulder press, the other on the lat pulldown, then swap. Rest about 60–90 s.',
+      note: 'Before the first working set of each, do one light set of 10 to warm up the joint.',
       items: [
-        { code: 'A1', ex: 'leg-press', sets: 3, reps: '12', rpe: '6', unit: 'kg (plates or pin)',
-          start: { ali: '50' }, past: { ali: 'Predrag days: 55 kg × 10, then 45 kg × 15' },
-          tip: { aamna: 'Feeler set light: a weight you could press about 20 times. Then adjust' } },
-        { code: 'A2', ex: 'lat-pulldown', sets: 3, reps: '12', rpe: '6', unit: 'kg',
-          start: { ali: '35' }, past: { ali: 'Predrag days: 45 kg × 12 × 4' },
-          tip: { aamna: 'A weight you could pull about 15 times. Hold the bar at your chest for 1 s' } }
+        { code: 'A1', ex: 'shoulder-press-machine', sets: 3, reps: '10', rpe: '7', unit: 'kg (pin)',
+          past: { ali: 'Predrag days: barbell press ~30 kg × 4 sets' },
+          tip: { ali: 'Start at your Machine Day (13 Nov) weight. If 12 reps felt easy then, go one pin up', aamna: 'Start at your Machine Day (13 Nov) weight. If 12 reps felt easy then, go one pin up' } },
+        { code: 'A2', ex: 'lat-pulldown', sets: 3, reps: '10', rpe: '7', unit: 'kg',
+          start: { ali: '40' }, past: { ali: 'Predrag days: 45 kg × 12 × 4' },
+          tip: { aamna: 'Machine Day weight, or one pin up. Hold the bar at your chest for 1 s' } }
       ]
     },
     {
       id: 'B', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
-      how: 'Chest press and seated row, then swap. Rest about 60 s.',
+      how: 'Seated row and lateral raises, then swap. Rest about 60 s.',
       items: [
-        { code: 'B1', ex: 'chest-press-machine', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
-          past: { ali: 'Predrag days: bench 40 kg' },
-          tip: { ali: 'Feeler set first, then adjust', aamna: 'Feeler set light, then adjust' } },
-        { code: 'B2', ex: 'cable-row', sets: 3, reps: '12', rpe: '6', unit: 'kg',
-          start: { ali: '35' }, past: { ali: 'Predrag days: 45 kg × 12 × 3' },
-          tip: { aamna: 'A weight you could pull about 15 times. Chest tall, no rocking' } }
+        { code: 'B1', ex: 'cable-row', sets: 3, reps: '10', rpe: '7', unit: 'kg',
+          start: { ali: '40' }, past: { ali: 'Predrag days: 45 kg × 12 × 3' },
+          tip: { aamna: 'Machine Day weight, or one pin up. Chest tall, no rocking' } },
+        { code: 'B2', ex: 'lateral-raise', sets: 3, reps: '12–15', rpe: '7', unit: 'kg (each DB)',
+          start: { ali: '6' }, past: { ali: 'Predrag days: 4 kg × 15, elbows up' },
+          tip: { aamna: 'Start with 2–4 kg. Lead with your elbows, stop at shoulder height' } }
       ]
     },
     {
-      id: 'C', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
-      how: 'Shoulder press and leg curl, then swap. Rest about 60 s.',
+      id: 'C', format: 'Circuit', rounds: 2, minutes: 9, rest: 45,
+      how: 'Face pull → cable curl → triceps pushdown, then rest about 45 s. All three are on the cable, so take turns: while one works, the other rests.',
       items: [
-        { code: 'C1', ex: 'shoulder-press-machine', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
-          tip: { ali: 'Feeler set first. Back flat on the pad', aamna: 'Light feeler set, back flat on the pad' } },
-        { code: 'C2', ex: 'leg-curl', sets: 3, reps: '12', rpe: '6', unit: 'kg (pin)',
-          tip: { ali: 'Squeeze 1 s at the bottom, lower slowly', aamna: 'Squeeze 1 s at the bottom, lower slowly' } }
-      ]
-    },
-    {
-      id: 'D', format: 'Swap Stations', rounds: 2, minutes: 6, rest: 45,
-      how: 'Arm pump. One on curls, one on pushdowns, then swap. If there’s only one cable station, take turns.',
-      items: [
-        { code: 'D1', ex: 'cable-curl', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+        { code: 'C1', ex: 'face-pull', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+          tip: { ali: 'Light and strict: the back of your shoulders does the work', aamna: 'Light and strict: the back of your shoulders does the work' } },
+        { code: 'C2', ex: 'cable-curl', sets: 2, reps: '12', rpe: '7', unit: 'kg',
           tip: { ali: 'Elbows pinned, squeeze at the top', aamna: 'Elbows pinned, squeeze at the top' } },
-        { code: 'D2', ex: 'triceps-pushdown', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+        { code: 'C3', ex: 'triceps-pushdown', sets: 2, reps: '12', rpe: '7', unit: 'kg',
           past: { ali: 'Predrag days: pushdown 11 kg' } }
+      ]
+    },
+    {
+      id: 'D', format: 'Core', rounds: 2, minutes: 4, rest: 30,
+      how: 'Take turns on the landmine.',
+      items: [
+        { code: 'D1', ex: 'landmine-rotation', sets: 2, reps: '8 / side', rpe: '6', unit: 'kg added (blank = bar only)',
+          past: { ali: 'Predrag days: 30 → 20 → 10 kg drop set' },
+          tip: { ali: 'Your favourite. Smooth, controlled arcs', aamna: 'Bar only. Pivot your back foot' } }
       ]
     }
   ],
   finisher: {
-    type: 'intervals', name: 'Bike Finish', ex: 'bike', rpe: '7',
-    sets: 1, rounds: 6, setRest: 0,
+    type: 'intervals', name: 'Predrag Rounds', ex: 'shadow-boxing', rpe: '7',
+    sets: 2, rounds: 3, setRest: 60,
     segments: [
-      { label: 'Push', secs: 30 },
-      { label: 'Easy', secs: 30, rest: true }
+      { label: 'Jab–cross', secs: 20 },
+      { label: 'Uppercuts', secs: 20 },
+      { label: 'Hooks', secs: 20 },
+      { label: 'Rest', secs: 10, rest: true }
     ],
-    how: 'Side by side on two bikes: 30 s hard pedalling, 30 s easy, 6 times. The app beeps at every switch.',
-    pace: 'Raise the resistance for the hard parts. Hard but steady, not a sprint.',
-    alt: 'Optional if you’re short on time.'
+    how: 'Upper-body cardio, no leg work: shadow-box side by side. Two high beeps mean punch, one low beep means rest.',
+    pace: 'Fast hands, light feet, breathe out on every punch.',
+    alt: 'Shoulders cooked? Do 1 set instead of 2.'
   },
   cooldown: {
     minutes: 4,
     items: [
       { ex: 'chest-stretch', dose: '30 s / side' },
-      { ex: 'childs-pose', dose: '45 s' },
-      { ex: 'hip-flexor-stretch', dose: '30 s / side' }
+      { ex: 'childs-pose', dose: '45 s, reach to each side' }
     ],
-    extra: 'That wraps up Week 1.'
+    extra: 'Then 5 slow breaths.'
   },
-  planB: 'Short on time (35 min): warm-up, Blocks A and B (3 rounds each), then Block D. Skip Block C and the bike.',
+  planB: 'Short on time (35 min): warm-up, Blocks A and B (3 rounds each), then 1 set of Predrag Rounds. Skip C and D.',
   swaps: [
-    ['Leg press', 'Hack squat or Smith machine squat 3 × 12'],
-    ['Lat pulldown', 'Assisted pull-up machine'],
-    ['Chest press machine', 'Pec deck (fly machine) or DB bench press'],
-    ['Seated cable row', 'Chest-supported row machine'],
     ['Shoulder press machine', 'Seated DB shoulder press'],
-    ['Leg curl', 'Lying leg curl'],
+    ['Lat pulldown', 'Assisted pull-up machine'],
+    ['Seated cable row', 'Chest-supported row machine, or 1-arm DB row'],
+    ['Lateral raise (DB)', 'Cable lateral raise, or the lateral raise machine'],
+    ['Face pull', 'Rear-delt fly machine (reverse pec deck)'],
     ['Cable curl', 'DB curl'],
-    ['Triceps pushdown', 'Triceps dip machine']
+    ['Triceps pushdown', 'Triceps dip machine'],
+    ['Bar left right', 'Pallof press']
   ],
   after: [
-    'Write down the pin or plates for every machine. That’s your number to beat next time.',
-    'Ali: 3 sessions this week, so the Week 1 target is hit.',
-    'Send the coach your report (the "Build my report" button at the bottom).'
+    'Write down the pin or weight for every exercise. That’s your number to beat next time.',
+    'Send the coach your report (Build my report). No lifts are logged yet, so your first PRs are waiting.',
+    'Next session: legs are fresh, so make it a lower-body or full-body machine day.'
   ],
-  next: 'Week 2 (from Mon 16 Nov) will be built around machines plus a few dumbbell moves, at RPE 7.'
+  next: 'Next: a leg-focused machine day (leg press, leg curl, leg extension, plus a little core).'
 };
 
 /* Earlier sessions, kept so an unsent report can still be built from logs saved on the phone. */
 window.PAST_SESSIONS = [
+  {
+    id: '2026-11-13_W1S4m', week: 1, num: 4, type: 'Together', dateLabel: 'Fri 13 Nov 2026', title: 'Machine Day',
+    warmup: { items: [1, 2, 3, 4] },
+    cooldown: { items: [1, 2, 3] },
+    blocks: [
+      { items: [
+        { code: 'A1', ex: 'leg-press', sets: 3, reps: '12', unit: 'kg (plates or pin)' },
+        { code: 'A2', ex: 'lat-pulldown', sets: 3, reps: '12', unit: 'kg' }
+      ] },
+      { items: [
+        { code: 'B1', ex: 'chest-press-machine', sets: 3, reps: '12', unit: 'kg (pin)' },
+        { code: 'B2', ex: 'cable-row', sets: 3, reps: '12', unit: 'kg' }
+      ] },
+      { items: [
+        { code: 'C1', ex: 'shoulder-press-machine', sets: 3, reps: '12', unit: 'kg (pin)' },
+        { code: 'C2', ex: 'leg-curl', sets: 3, reps: '12', unit: 'kg (pin)' }
+      ] },
+      { items: [
+        { code: 'D1', ex: 'cable-curl', sets: 2, reps: '15', unit: 'kg' },
+        { code: 'D2', ex: 'triceps-pushdown', sets: 2, reps: '15', unit: 'kg' }
+      ] }
+    ],
+    finisher: { type: 'intervals', name: 'Bike Finish', sets: 1, rounds: 6 }
+  },
   {
     id: '2026-11-13_W1S4', week: 1, num: 4, type: 'Together', dateLabel: 'Fri 13 Nov 2026', title: 'Tag Team (switched to machines)',
     warmup: { items: [1, 2, 3, 4, 5, 6] },
@@ -194,7 +221,7 @@ window.PAST_SESSIONS = [
 ];
 
 window.PLAN = {
-  currentWeek: 1,
+  currentWeek: 2,
   weeks: [
     { w: 1, dates: '7–15 Nov', phase: 'reentry', note: 'Kickoff · RPE 6' },
     { w: 2, dates: '16–22 Nov', phase: 'reentry', note: 'RPE 7 · benchmarks' },
@@ -221,10 +248,10 @@ window.PLAN = {
 };
 
 window.PROGRESS = {
-  updated: '2026-11-13',
+  updated: '2026-11-21',
   sessions: { ali: 2, aamna: 2, together: 2 },
   streakWeeks: { ali: 0, aamna: 0 },
   prs: { ali: 0, aamna: 0 },
   history: 'Ali\u2019s Predrag notes (Dec 2021 to Dec 2022) are saved. Marks to beat: 5 strict pull-ups, lat pulldown 45 kg × 12.',
-  nextMilestone: 'Today: Ali\u2019s 3rd session of the week hits the Week 1 target. Aamna\u2019s Tuesday solo session is still to be confirmed'
+  nextMilestone: 'Send your reports: no lifts are logged yet. Confirmed so far: 2 sessions each. Tell the coach about 10 and 13 Nov and any sessions since'
 };
