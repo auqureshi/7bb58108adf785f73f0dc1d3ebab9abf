@@ -39,6 +39,7 @@ _Fill this in, or just tell the coach and it gets updated for you. Blanks are fi
 ## Preferences
 - **Love:** **machines** (leg press, pulldown, rows, chest and shoulder press machines, cables), arm pump supersets, "bar left right" (landmine rotation), boxing rounds.
 - **Dislike:** the athletic T-C style (med-ball throws, KB swings, partner relay). Dropped mid-gym on 13 Nov 2026 and swapped for machines.
+- **Session scope:** when Ali names body parts for a session, stick to exactly those (21 Nov: "only shoulders and back", so no added arm or core work).
 - **Hate:**
 
 ## Gym and equipment

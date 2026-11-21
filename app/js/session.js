@@ -12,8 +12,8 @@ window.SESSION = {
   title: 'Shoulders & Back',
   type: 'Together', template: 'Upper body · machines & cables', phase: 'Phase 1 · Re-Entry',
   minutes: 50, rpe: '7',
-  brief: 'No legs today. Shoulders get paired with back, because pressing and pulling in the same session keeps your shoulders healthy and builds the V-shape. Ali, Predrag ran back-and-shoulder days the same way. Then an arm pump, a little "bar left right", and boxing to finish.',
-  jobs: ['Press: shoulder machine + side raises', 'Pull: pulldown + row', 'Rear shoulders and arms pump', 'Box it out'],
+  brief: 'No legs today. Shoulders get paired with back, because pressing and pulling in the same session keeps your shoulders healthy and builds the V-shape. Ali, Predrag ran back-and-shoulder days the same way. Only shoulders and back today, with an optional boxing finish.',
+  jobs: ['Press: shoulder machine + side raises', 'Pull: pulldown + row', 'Rear shoulders + lower back', 'Optional: box it out'],
   note: 'Week 2 effort is RPE 7: stop each set with about 3 reps left. If this is your first session since Fri 13 Nov, keep it at RPE 6 today (about 4 left).',
   warmup: {
     minutes: 7,
@@ -52,24 +52,14 @@ window.SESSION = {
       ]
     },
     {
-      id: 'C', format: 'Circuit', rounds: 2, minutes: 9, rest: 45,
-      how: 'Face pull → cable curl → triceps pushdown, then rest about 45 s. All three are on the cable, so take turns: while one works, the other rests.',
+      id: 'C', format: 'Swap Stations', rounds: 3, minutes: 10, rest: 60,
+      how: 'Face pull and back extension, then swap. Rest about 60 s.',
       items: [
-        { code: 'C1', ex: 'face-pull', sets: 2, reps: '15', rpe: '7', unit: 'kg',
+        { code: 'C1', ex: 'face-pull', sets: 3, reps: '15', rpe: '7', unit: 'kg',
           tip: { ali: 'Light and strict: the back of your shoulders does the work', aamna: 'Light and strict: the back of your shoulders does the work' } },
-        { code: 'C2', ex: 'cable-curl', sets: 2, reps: '12', rpe: '7', unit: 'kg',
-          tip: { ali: 'Elbows pinned, squeeze at the top', aamna: 'Elbows pinned, squeeze at the top' } },
-        { code: 'C3', ex: 'triceps-pushdown', sets: 2, reps: '12', rpe: '7', unit: 'kg',
-          past: { ali: 'Predrag days: pushdown 11 kg' } }
-      ]
-    },
-    {
-      id: 'D', format: 'Core', rounds: 2, minutes: 4, rest: 30,
-      how: 'Take turns on the landmine.',
-      items: [
-        { code: 'D1', ex: 'landmine-rotation', sets: 2, reps: '8 / side', rpe: '6', unit: 'kg added (blank = bar only)',
-          past: { ali: 'Predrag days: 30 → 20 → 10 kg drop set' },
-          tip: { ali: 'Your favourite. Smooth, controlled arcs', aamna: 'Bar only. Pivot your back foot' } }
+        { code: 'C2', ex: 'back-extension', sets: 3, reps: '12', rpe: '7', unit: 'kg plate at chest (blank = bodyweight)',
+          past: { ali: 'Predrag days: 12 × 3 to finish back day' },
+          tip: { ali: 'Bodyweight, or hold a 5–10 kg plate if it felt easy on 8 Nov', aamna: 'Bodyweight, like on 8 Nov. Squeeze your glutes to come up, don\u2019t over-arch' } }
       ]
     }
   ],
@@ -82,7 +72,7 @@ window.SESSION = {
       { label: 'Hooks', secs: 20 },
       { label: 'Rest', secs: 10, rest: true }
     ],
-    how: 'Upper-body cardio, no leg work: shadow-box side by side. Two high beeps mean punch, one low beep means rest.',
+    how: 'Optional. Shoulder-endurance cardio: shadow-box side by side. Two high beeps mean punch, one low beep means rest.',
     pace: 'Fast hands, light feet, breathe out on every punch.',
     alt: 'Shoulders cooked? Do 1 set instead of 2.'
   },
@@ -94,16 +84,14 @@ window.SESSION = {
     ],
     extra: 'Then 5 slow breaths.'
   },
-  planB: 'Short on time (35 min): warm-up, Blocks A and B (3 rounds each), then 1 set of Predrag Rounds. Skip C and D.',
+  planB: 'Short on time (35 min): warm-up, Blocks A and B (3 rounds each), then Block C × 2. Skip the boxing.',
   swaps: [
     ['Shoulder press machine', 'Seated DB shoulder press'],
     ['Lat pulldown', 'Assisted pull-up machine'],
     ['Seated cable row', 'Chest-supported row machine, or 1-arm DB row'],
     ['Lateral raise (DB)', 'Cable lateral raise, or the lateral raise machine'],
     ['Face pull', 'Rear-delt fly machine (reverse pec deck)'],
-    ['Cable curl', 'DB curl'],
-    ['Triceps pushdown', 'Triceps dip machine'],
-    ['Bar left right', 'Pallof press']
+    ['Back extension', 'Reverse hyper machine, or a straight-arm cable pulldown 3 × 12']
   ],
   after: [
     'Write down the pin or weight for every exercise. That’s your number to beat next time.',
